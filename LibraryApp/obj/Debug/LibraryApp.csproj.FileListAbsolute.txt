@@ -1,0 +1,9 @@
+C:\Users\mamon\RiderProjects\LibraryApp\LibraryApp\bin\Debug\LibraryApp.exe.config
+C:\Users\mamon\RiderProjects\LibraryApp\LibraryApp\bin\Debug\LibraryApp.exe
+C:\Users\mamon\RiderProjects\LibraryApp\LibraryApp\bin\Debug\LibraryApp.pdb
+C:\Users\mamon\RiderProjects\LibraryApp\LibraryApp\obj\Debug\LibraryApp.csprojAssemblyReference.cache
+C:\Users\mamon\RiderProjects\LibraryApp\LibraryApp\obj\Debug\LibraryApp.Properties.Resources.resources
+C:\Users\mamon\RiderProjects\LibraryApp\LibraryApp\obj\Debug\LibraryApp.csproj.GenerateResource.cache
+C:\Users\mamon\RiderProjects\LibraryApp\LibraryApp\obj\Debug\LibraryApp.csproj.CoreCompileInputs.cache
+C:\Users\mamon\RiderProjects\LibraryApp\LibraryApp\obj\Debug\LibraryApp.exe
+C:\Users\mamon\RiderProjects\LibraryApp\LibraryApp\obj\Debug\LibraryApp.pdb
