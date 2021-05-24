@@ -12,7 +12,10 @@ namespace LibraryApp
             get
             {
                 if (instance == null)
+                {
                     instance = new UsersList();
+                }
+
                 return instance;
             }
         }

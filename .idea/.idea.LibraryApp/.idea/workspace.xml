@@ -1,12 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="9db8337f-ee09-4bce-b9f2-d33e9c7d4fa3" name="Default Changelist" comment="Init commit11112222">
+      <change afterPath="$PROJECT_DIR$/LibraryApp/BookFilter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LibraryApp/Department.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LibraryApp/DepartmentHead.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LibraryApp/DepartmentHeadsList.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LibraryApp/DepartmentList.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LibraryApp/HeadManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LibraryApp/Librarian.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LibraryApp/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LibraryApp/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LibraryApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LibraryApp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibraryApp/BooksList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LibraryApp/BooksList.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibraryApp/LibraryApp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/LibraryApp/LibraryApp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibraryApp/ReaderUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LibraryApp/ReaderUser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibraryApp/UsersList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LibraryApp/UsersList.cs" afterDir="false" />
     </list>
-    <list id="dc3f6ab7-6199-4b8c-a9b8-c31ec9ac3804" name="Revert &quot;Init commit11112222&quot;" comment="">
-      <change beforePath="$PROJECT_DIR$/LibraryApp/obj/Debug/LibraryApp.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/LibraryApp/obj/Debug/LibraryApp.csprojAssemblyReference.cache" afterDir="false" />
-    </list>
+    <list id="dc3f6ab7-6199-4b8c-a9b8-c31ec9ac3804" name="Revert &quot;Init commit11112222&quot;" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,24 +49,45 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///ReaderUser.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Form1.Designer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Form1.Designer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///UserReader.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LibraryApp/Properties/Resources.Designer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///ReaderUser.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Form1.Designer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LibraryApp/Form1.Designer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LibraryApp/Form1.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LibraryApp/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LibraryApp/HeadManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LibraryApp/DepartmentHeadsList.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LibraryApp/DepartmentHead.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LibraryApp/DepartmentList.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LibraryApp/Department.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LibraryApp/Librarian.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LibraryApp/BookFilter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///ReaderUser.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LibraryApp/ReaderUser.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LibraryApp/BooksList.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LibraryApp/UsersList.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Form1.Designer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LibraryApp/Program.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/LibraryApp/Form1.Designer.cs" />
+        <option value="$PROJECT_DIR$/LibraryApp/BookFilter.cs" />
+        <option value="$PROJECT_DIR$/LibraryApp/ReaderUser.cs" />
+        <option value="$PROJECT_DIR$/LibraryApp/BooksList.cs" />
+        <option value="$PROJECT_DIR$/LibraryApp/Department.cs" />
+        <option value="$PROJECT_DIR$/LibraryApp/Librarian.cs" />
+        <option value="$PROJECT_DIR$/LibraryApp/DepartmentList.cs" />
+        <option value="$PROJECT_DIR$/LibraryApp/DepartmenHeadsList.cs" />
+        <option value="$PROJECT_DIR$/LibraryApp/UsersList.cs" />
+        <option value="$PROJECT_DIR$/LibraryApp/DepartmentHead.cs" />
+        <option value="$PROJECT_DIR$/LibraryApp/DepartmentHeadsList.cs" />
+        <option value="$PROJECT_DIR$/LibraryApp/HeadManager.cs" />
       </list>
     </option>
   </component>
@@ -135,6 +184,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="741" y="393" width="566" height="414" key="MultipleFileMergeDialog/0.0.1920.1050/-1920.0.1920.1050/1920.0.1280.994@0.0.1920.1050" timestamp="1621883980225" />
+    <state x="670" y="203" key="RiderGenerateDialog" timestamp="1621888432672">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="670" y="203" key="RiderGenerateDialog/0.0.1920.1050/-1920.0.1920.1050/1920.0.1280.994@0.0.1920.1050" timestamp="1621888432672" />
     <state x="694" y="246" key="RollbackChangesDialog" timestamp="1621885455031">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
