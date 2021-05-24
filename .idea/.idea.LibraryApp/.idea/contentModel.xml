@@ -14,12 +14,12 @@
         <e p="DepartmentHead.cs" t="Include" />
         <e p="DepartmentHeadsList.cs" t="Include" />
         <e p="DepartmentList.cs" t="Include" />
-        <e p="Form1.cs" t="Include" />
-        <e p="Form1.Designer.cs" t="Include" />
-        <e p="Form1.resx" t="Include" />
         <e p="HeadManager.cs" t="Include" />
         <e p="Librarian.cs" t="Include" />
         <e p="LibraryApp.csproj" t="IncludeRecursive" />
+        <e p="LoginForm.cs" t="Include" />
+        <e p="LoginForm.Designer.cs" t="Include" />
+        <e p="LoginForm.resx" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">

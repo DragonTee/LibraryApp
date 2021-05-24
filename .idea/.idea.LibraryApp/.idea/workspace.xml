@@ -19,22 +19,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9db8337f-ee09-4bce-b9f2-d33e9c7d4fa3" name="Default Changelist" comment="Init commit11112222">
-      <change afterPath="$PROJECT_DIR$/LibraryApp/BookFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibraryApp/Department.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibraryApp/DepartmentHead.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibraryApp/DepartmentHeadsList.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibraryApp/DepartmentList.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibraryApp/HeadManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibraryApp/Librarian.cs" afterDir="false" />
+    <list default="true" id="9db8337f-ee09-4bce-b9f2-d33e9c7d4fa3" name="Default Changelist" comment="Initialized project structure">
+      <change afterPath="$PROJECT_DIR$/LibraryApp/LoginForm.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LibraryApp/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LibraryApp/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LibraryApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LibraryApp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LibraryApp/BooksList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LibraryApp/BooksList.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibraryApp/Form1.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibraryApp/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LibraryApp/LoginForm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibraryApp/Form1.resx" beforeDir="false" afterPath="$PROJECT_DIR$/LibraryApp/LoginForm.resx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LibraryApp/LibraryApp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/LibraryApp/LibraryApp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LibraryApp/ReaderUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LibraryApp/ReaderUser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LibraryApp/UsersList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LibraryApp/UsersList.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibraryApp/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LibraryApp/Program.cs" afterDir="false" />
     </list>
-    <list id="dc3f6ab7-6199-4b8c-a9b8-c31ec9ac3804" name="Revert &quot;Init commit11112222&quot;" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,8 +48,8 @@
     <setting file="file://$PROJECT_DIR$/LibraryApp/Properties/Resources.Designer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///ReaderUser.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Form1.Designer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LibraryApp/Form1.Designer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LibraryApp/Form1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LibraryApp/LoginForm.Designer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LibraryApp/LoginForm.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LibraryApp/HeadManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LibraryApp/DepartmentHeadsList.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LibraryApp/DepartmentHead.cs" root0="FORCE_HIGHLIGHTING" />
@@ -67,6 +61,7 @@
     <setting file="mock:///ReaderUser.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LibraryApp/ReaderUser.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LibraryApp/BooksList.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LibraryApp/LoginForm.resx" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LibraryApp/UsersList.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Form1.Designer.cs" root0="SKIP_HIGHLIGHTING" />
@@ -76,7 +71,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/LibraryApp/Form1.Designer.cs" />
         <option value="$PROJECT_DIR$/LibraryApp/BookFilter.cs" />
         <option value="$PROJECT_DIR$/LibraryApp/ReaderUser.cs" />
         <option value="$PROJECT_DIR$/LibraryApp/BooksList.cs" />
@@ -88,6 +82,9 @@
         <option value="$PROJECT_DIR$/LibraryApp/DepartmentHead.cs" />
         <option value="$PROJECT_DIR$/LibraryApp/DepartmentHeadsList.cs" />
         <option value="$PROJECT_DIR$/LibraryApp/HeadManager.cs" />
+        <option value="$PROJECT_DIR$/LibraryApp/Form1.cs" />
+        <option value="$PROJECT_DIR$/LibraryApp/Form1.Designer.cs" />
+        <option value="$PROJECT_DIR$/LibraryApp/LoginForm.cs" />
       </list>
     </option>
   </component>
@@ -128,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621885594487</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Initialized project structure">
+      <created>1621893115683</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1621893115683</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
@@ -161,6 +165,11 @@
             </State>
           </value>
         </entry>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
       </map>
     </option>
     <option name="OPEN_GENERIC_TABS">
@@ -173,7 +182,8 @@
     <MESSAGE value="123" />
     <MESSAGE value="Init commit11112222" />
     <MESSAGE value="Revert &quot;Init commit11112222&quot;&#10;&#10;This reverts commit 357f9b95" />
-    <option name="LAST_COMMIT_MESSAGE" value="Revert &quot;Init commit11112222&quot;&#10;&#10;This reverts commit 357f9b95" />
+    <MESSAGE value="Initialized project structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initialized project structure" />
   </component>
   <component name="WindowStateProjectService">
     <state x="549" y="99" key="CommitChangelistDialog2" timestamp="1621885593645">
@@ -196,10 +206,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="807" y="439" key="VCS.ChangelistChooser/0.0.1920.1050/-1920.0.1920.1050/1920.0.1280.994@0.0.1920.1050" timestamp="1621885606546" />
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1621885367845">
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1621893371661">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1920.0.1920.1050/1920.0.1280.994@0.0.1920.1050" timestamp="1621885367845" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1920.0.1920.1050/1920.0.1280.994@0.0.1920.1050" timestamp="1621893371661" />
     <state x="92" y="92" width="1736" height="866" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1621883897233">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
