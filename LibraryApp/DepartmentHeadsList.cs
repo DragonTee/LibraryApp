@@ -28,6 +28,11 @@ namespace LibraryApp
         {
             heads.Add(new DepartmentHead(name, heads.Count, 0));
         }
+        
+        public void AddDepartmentHead(string name, int departmentId)
+        {
+            heads.Add(new DepartmentHead(name, heads.Count, departmentId));
+        }
 
         public void DeleteDepartmentHead(int id)
         {
