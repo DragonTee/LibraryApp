@@ -31,17 +31,17 @@ namespace LibraryApp
         
         public void AddLibrarian(string name)
         {
-            return;
+            DepartmentList.Instance.GetDepartmentsList[departmentId].AddLibrarian(name);
         }
 
         public void RemoveLibrarian(int id)
         {
-            return;
+            DepartmentList.Instance.GetDepartmentsList[departmentId].RemoveLibrarian(id);
         }
         
         public List<Librarian> GetLibrariansList()
         {
-            return null;
+            return DepartmentList.Instance.GetDepartmentsList[departmentId].GetLibrarians();
         }
     }
 }

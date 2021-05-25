@@ -9,16 +9,22 @@ namespace LibraryApp
         private List<Librarian> librarians;
         private int id;
 
-        public List<Librarian> getLibrarians() => librarians;
+        public List<Librarian> GetLibrarians() => librarians;
 
-        public void AddLibrarian(Librarian librarian)
+        public Department(int id)
         {
-            return;
+            librarians = new List<Librarian>();
+            this.id = id;
+        }
+        
+        public void AddLibrarian(string name)
+        {
+            librarians.Add(new Librarian(name, librarians.Count));
         }
 
-        public void RemoveLibrarian(Librarian librarian)
+        public void RemoveLibrarian(int id)
         {
-            return;
+            librarians.Remove(librarians[id]);
         }
 
         public int Id => id;

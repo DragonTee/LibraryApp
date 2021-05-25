@@ -26,17 +26,26 @@ namespace LibraryApp
 
         public void AddDepartmentHead(string name)
         {
-            return;
+            heads.Add(new DepartmentHead(name, heads.Count, 0));
+        }
+        
+        public void AddDepartmentHead(string name, int departmentId)
+        {
+            heads.Add(new DepartmentHead(name, heads.Count, departmentId));
         }
 
         public void DeleteDepartmentHead(int id)
         {
-            return;
+            if (id >= heads.Count)
+                return;
+            heads.Remove(heads[id]);
         }
 
-        public void SetHeadDepartmentId(int departmentId)
+        public void SetHeadDepartmentId(int headId, int departmentId)
         {
-            return;
+            if (headId >= heads.Count)
+                return;
+            heads[headId].DepartmentId = departmentId;
         }
         
     }

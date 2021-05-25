@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Security.Principal;
 
 namespace LibraryApp
 {
@@ -26,12 +27,14 @@ namespace LibraryApp
 
         public void DeleteDepartment(int id)
         {
-            return;
+            departments.Remove(departments[id]);
         }
 
-        public void AddDepartment()
+        public int AddDepartment()
         {
-            return;
+            var id = departments.Count;
+            departments.Add(new Department(id));
+            return id;
         }
     }
 }
