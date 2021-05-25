@@ -2,7 +2,7 @@
 
 namespace LibraryApp
 {
-    public struct Book
+    public class Book
     {
         public string Name;
         public string Author;
@@ -10,5 +10,11 @@ namespace LibraryApp
         public int TakenBy;
         public int AccessLevel;
         public DateTime ReturnDate;
+
+        public bool Equals(Book other)
+        {
+            return (other.Name == Name && other.Author == Author && other.Taken == Taken && other
+                .TakenBy == TakenBy && other.AccessLevel == AccessLevel);
+        }
     }
 }

@@ -27,12 +27,13 @@ namespace LibraryApp
         
         public List<Book> GetBooksList(BookFilter filter)
         {
-            return books;
+            return filter.FilterList(books);
         }
         
-        public List<Book> GetTakenBooks(BookFilter filter)
+        public List<Book> GetTakenBooks(int id)
         {
-            return books;
+            var filter = new BookFilter("", "", id, 100, false);
+            return filter.FilterList(books);
         }
 
         public void AddBook(Book book)
@@ -47,12 +48,19 @@ namespace LibraryApp
 
         public void SetAsTaken(Book book, int id)
         {
-            return;
+            var index = books.FindIndex(book.Equals);
+            if (books[index].Taken)
+                return;
+            books[index].Taken = true;
+            books[index].TakenBy = id;
         }
 
         public void ReturnBook(Book book)
         {
-            return;
+            var index = books.FindIndex(book.Equals);
+            if (!books[index].Taken)
+                return;
+            books[index].Taken = false;
         }
     }
 }
