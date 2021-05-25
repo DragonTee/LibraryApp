@@ -14,37 +14,37 @@ namespace LibraryApp
 
         public void CreateNewDepartment()
         {
-            return;
+            DepartmentList.Instance.AddDepartment();
         }
 
         public void DeleteDepartment(int id)
         {
-            return;
+            DepartmentList.Instance.DeleteDepartment(id);
         }
 
         public void DeleteDepartmentHead(int id)
         {
-            return;
+            DepartmentHeadsList.Instance.DeleteDepartmentHead(id);
         }
 
         public List<DepartmentHead> GetDepartmentHeads()
         {
-            return null;
+            return DepartmentHeadsList.Instance.GetDepartmentHeads;
         }
 
         public List<Department> GetDepartmentsList()
         {
-            return null;
+            return DepartmentList.Instance.GetDepartmentsList;
         }
 
         public void AddDepartmentHead(string name)
         {
-            return;
+            DepartmentHeadsList.Instance.AddDepartmentHead(name);
         }
 
         public void SetHeadDepartment(int headId, int departmentId)
         {
-            return;
+            DepartmentHeadsList.Instance.SetHeadDepartmentId(headId, departmentId);
         }
     }
 }
