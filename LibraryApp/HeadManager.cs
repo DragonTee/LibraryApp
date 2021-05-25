@@ -41,6 +41,11 @@ namespace LibraryApp
         {
             DepartmentHeadsList.Instance.AddDepartmentHead(name);
         }
+        
+        public void AddDepartmentHead(string name, int departmentId)
+        {
+            DepartmentHeadsList.Instance.AddDepartmentHead(name, departmentId);
+        }
 
         public void SetHeadDepartment(int headId, int departmentId)
         {
