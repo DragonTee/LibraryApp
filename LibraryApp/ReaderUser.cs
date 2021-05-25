@@ -25,17 +25,17 @@ namespace LibraryApp
 
         public List<Book> GetBooksList()
         {
-            return null;
+            return BooksList.Instance.GetBooksList();
         }
         
         public List<Book> GetBooksListFiltered(BookFilter filter)
         {
-            return null;
+            return BooksList.Instance.GetBooksList(filter);
         }
 
         public List<Book> GetTakenBooksList()
         {
-            return null;
+            return BooksList.Instance.GetTakenBooks(null);
         }
         
         
