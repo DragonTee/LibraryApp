@@ -1,6 +1,6 @@
 ﻿namespace LibraryApp
 {
-    partial class LoginForm
+    partial class LoginSelectForm
     {
         /// <summary>
         /// Required designer variable.
@@ -98,14 +98,14 @@
             this.button4.Text = "Login as Head Manager";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // LoginForm
+            // LoginSelectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(564, 441);
             this.Controls.Add(this.tableLayoutPanel1);
             this.MinimumSize = new System.Drawing.Size(580, 480);
-            this.Name = "LoginForm";
+            this.Name = "LoginSelectForm";
             this.Text = "Login";
             this.Load += new System.EventHandler(this.LoginForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);

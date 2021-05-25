@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LibraryApp
 {
-    public partial class LoginForm : Form
+    public partial class LoginSelectForm : Form
     {
-        public LoginForm()
+        public LoginSelectForm()
         {
             InitializeComponent();
         }
