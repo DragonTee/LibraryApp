@@ -35,7 +35,7 @@ namespace LibraryApp
 
         public List<Book> GetTakenBooksList()
         {
-            return BooksList.Instance.GetTakenBooks(null);
+            return BooksList.Instance.GetTakenBooks(id);
         }
         
         
