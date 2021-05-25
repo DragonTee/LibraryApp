@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace LibraryApp
 {
@@ -9,6 +10,24 @@ namespace LibraryApp
         private int takenBy;
         private int maxAccessLevel;
         private bool descendingOrder;
+
+        public class BookComparer : IComparer<Book>
+        {
+            private bool ascendingOrder;
+            public BookComparer(bool ascending)
+            {
+                this.ascendingOrder = ascending;
+            }
+            
+            public int Compare(Book x, Book y)
+            {
+                if (ascendingOrder)
+                    return String.Compare(x.Name, y.Name, StringComparison.InvariantCultureIgnoreCase);
+                else
+                    return String.Compare(y.Name, x.Name, StringComparison.InvariantCultureIgnoreCase);
+            }
+        }
+
 
         public BookFilter(string bookName, string authorName, int takenBy, int maxAccessLevel, bool descendingOrder)
         {
@@ -21,7 +40,23 @@ namespace LibraryApp
 
         public List<Book> FilterList(List<Book> list)
         {
-            return list;
+            var newList = new List<Book>();
+            foreach (var book in list)
+            {
+                var rightBook = true;
+                if (!book.Name.Contains(bookName))
+                    rightBook = false;
+                if (!book.Author.Contains(authorName))
+                    rightBook = false;
+                if (takenBy > 0 && book.TakenBy != takenBy)
+                    rightBook = false;
+                if (book.AccessLevel > maxAccessLevel)
+                    rightBook = false;
+                if (rightBook)
+                    newList.Add(book);
+            }
+            newList.Sort(new BookComparer(!descendingOrder));
+            return newList;
         }
     }
 }
