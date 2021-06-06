@@ -49,11 +49,29 @@
         <Compile Include="Book.cs" />
         <Compile Include="BookFilter.cs" />
         <Compile Include="BooksList.cs" />
+        <Compile Include="DepartmentHeadMenu.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="DepartmentHeadMenu.Designer.cs">
+          <DependentUpon>DepartmentHeadMenu.cs</DependentUpon>
+        </Compile>
         <Compile Include="DepartmentHeadsList.cs" />
         <Compile Include="Department.cs" />
         <Compile Include="DepartmentHead.cs" />
         <Compile Include="DepartmentList.cs" />
         <Compile Include="FormsManager.cs" />
+        <Compile Include="HeadManagerMenu.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="HeadManagerMenu.Designer.cs">
+          <DependentUpon>HeadManagerMenu.cs</DependentUpon>
+        </Compile>
+        <Compile Include="LibrarianMenu.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="LibrarianMenu.Designer.cs">
+          <DependentUpon>LibrarianMenu.cs</DependentUpon>
+        </Compile>
         <Compile Include="LoginSelectForm.cs">
             <SubType>Form</SubType>
         </Compile>
@@ -64,6 +82,12 @@
         <Compile Include="Librarian.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="ReaderMenu.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="ReaderMenu.Designer.cs">
+          <DependentUpon>ReaderMenu.cs</DependentUpon>
+        </Compile>
         <Compile Include="UserLoginForm.cs">
           <SubType>Form</SubType>
         </Compile>
@@ -72,6 +96,15 @@
         </Compile>
         <Compile Include="UsersList.cs" />
         <Compile Include="ReaderUser.cs" />
+        <EmbeddedResource Include="DepartmentHeadMenu.resx">
+          <DependentUpon>DepartmentHeadMenu.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="HeadManagerMenu.resx">
+          <DependentUpon>HeadManagerMenu.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="LibrarianMenu.resx">
+          <DependentUpon>LibrarianMenu.cs</DependentUpon>
+        </EmbeddedResource>
         <EmbeddedResource Include="LoginSelectForm.resx">
           <DependentUpon>LoginSelectForm.cs</DependentUpon>
         </EmbeddedResource>
@@ -84,6 +117,9 @@
             <AutoGen>True</AutoGen>
             <DependentUpon>Resources.resx</DependentUpon>
         </Compile>
+        <EmbeddedResource Include="ReaderMenu.resx">
+          <DependentUpon>ReaderMenu.cs</DependentUpon>
+        </EmbeddedResource>
         <EmbeddedResource Include="UserLoginForm.resx">
           <DependentUpon>UserLoginForm.cs</DependentUpon>
         </EmbeddedResource>
