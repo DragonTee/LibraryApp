@@ -7,7 +7,7 @@ namespace LibraryApp
 {
     public static class DataManager
     {
-        public static String FilePath { get; set; } = "UsersData.dat";
+        public static String FilePath { get; private set; } = "UsersData.dat";
         
         public enum UserType
         {
@@ -27,12 +27,21 @@ namespace LibraryApp
         }
 
         private static List<UserData> usersData = null;
+
+        public static void ChangeFilePath(string path)
+        {
+            usersData?.Clear();
+            usersData = null;
+            FilePath = path;
+        }
         
         public static List<UserData> LoadAllUsersData()
         {
             if (usersData != null)
                 return usersData;
             usersData = new List<UserData>();
+            if (!File.Exists(FilePath))
+                return usersData;
             using (Stream stream = new FileStream(FilePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
             {
                 using (var reader = new BinaryReader(stream, Encoding.Default))
@@ -61,6 +70,15 @@ namespace LibraryApp
                 usersData = new List<UserData>();
             usersData.Add(user);
             SaveUsersData();
+        }
+
+        public static void DeleteUser(string userLogin)
+        {
+            foreach (var user in usersData)
+            {
+                if (user.login.Equals(userLogin))
+                    usersData.Remove(user);
+            }
         }
         
         public static void SaveUsersData()
