@@ -49,6 +49,18 @@
         <Compile Include="Book.cs" />
         <Compile Include="BookFilter.cs" />
         <Compile Include="BooksList.cs" />
+        <Compile Include="BooksListForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="BooksListForm.Designer.cs">
+          <DependentUpon>BooksListForm.cs</DependentUpon>
+        </Compile>
+        <Compile Include="BooksListRow.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="BooksListRow.Designer.cs">
+          <DependentUpon>BooksListRow.cs</DependentUpon>
+        </Compile>
         <Compile Include="DepartmentHeadMenu.cs">
           <SubType>Form</SubType>
         </Compile>
@@ -96,6 +108,12 @@
         </Compile>
         <Compile Include="UsersList.cs" />
         <Compile Include="ReaderUser.cs" />
+        <EmbeddedResource Include="BooksListForm.resx">
+          <DependentUpon>BooksListForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="BooksListRow.resx">
+          <DependentUpon>BooksListRow.cs</DependentUpon>
+        </EmbeddedResource>
         <EmbeddedResource Include="DepartmentHeadMenu.resx">
           <DependentUpon>DepartmentHeadMenu.cs</DependentUpon>
         </EmbeddedResource>
