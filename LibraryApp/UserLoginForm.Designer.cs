@@ -133,6 +133,7 @@ namespace LibraryApp
             this.button1.TabIndex = 0;
             this.button1.Text = "Back";
             this.button1.UseVisualStyleBackColor = true;
+            button1.Click += GoBack;
             // 
             // button2
             // 

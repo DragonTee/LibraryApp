@@ -53,6 +53,7 @@
         <Compile Include="Department.cs" />
         <Compile Include="DepartmentHead.cs" />
         <Compile Include="DepartmentList.cs" />
+        <Compile Include="FormsManager.cs" />
         <Compile Include="LoginSelectForm.cs">
             <SubType>Form</SubType>
         </Compile>

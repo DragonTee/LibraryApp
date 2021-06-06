@@ -12,14 +12,29 @@ namespace LibraryApp
 {
     public partial class LoginSelectForm : Form
     {
+        private int currentUserType;
+        
         public LoginSelectForm()
         {
+            InitializeComponent();
+            FormsManager.MainForm = this;
+        }
+
+        public LoginSelectForm(bool secondaryForm)
+        {
+            if (!secondaryForm)
+                FormsManager.MainForm = this;
             InitializeComponent();
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-            throw new System.NotImplementedException();
+            
+        }
+        
+        public void ChangeForms(object sender, EventArgs e)
+        {
+            FormsManager.ChangeForm(new UserLoginForm());
         }
     }
 }
