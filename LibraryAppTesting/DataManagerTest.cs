@@ -27,6 +27,7 @@ namespace LibraryAppTesting
             data.password = "a";
             data.type = DataManager.UserType.Reader;
             data.attribute = 0;
+            data.id = 0;
             DataManager.SaveUser(data);
             DataManager.SaveUsersData();
             var users = DataManager.LoadAllUsersData();
@@ -50,6 +51,7 @@ namespace LibraryAppTesting
             data.password = "a";
             data.type = DataManager.UserType.Reader;
             data.attribute = 0;
+            data.id = 0;
             DataManager.SaveUser(data);
             DataManager.SaveUser(data);
             DataManager.SaveUser(data);

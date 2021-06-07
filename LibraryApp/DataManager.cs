@@ -24,6 +24,7 @@ namespace LibraryApp
             public int attribute;
             public string password;
             public UserType type;
+            public int id;
         }
 
         private static List<UserData> usersData = null;
@@ -55,7 +56,8 @@ namespace LibraryApp
                             name = reader.ReadString(),
                             attribute = reader.ReadInt32(),
                             password = reader.ReadString(),
-                            type = (UserType) reader.ReadInt32()
+                            type = (UserType) reader.ReadInt32(),
+                            id = reader.ReadInt32()
                         };
                         usersData.Add(user);
                     }
@@ -95,6 +97,7 @@ namespace LibraryApp
                         writer.Write(user.attribute);
                         writer.Write(user.password);
                         writer.Write((int)user.type);
+                        writer.Write(user.id);
                     }
                 }
             }
