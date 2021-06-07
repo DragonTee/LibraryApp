@@ -16,7 +16,9 @@ namespace LibraryApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginSelectForm());
+            var newForm = new LoginSelectForm();
+            newForm.Show();
+            Application.Run();
         }
     }
 }

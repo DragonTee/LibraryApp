@@ -32,11 +32,11 @@ namespace LibraryApp
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.AddBookBtn = new System.Windows.Forms.Button();
             this.ViewBooksBtn = new System.Windows.Forms.Button();
             this.ViewUsersBtn = new System.Windows.Forms.Button();
             this.AddUserBtn = new System.Windows.Forms.Button();
             this.SignOutBtn = new System.Windows.Forms.Button();
-            this.AddBookBtn = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,6 +63,16 @@ namespace LibraryApp
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(564, 441);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // AddBookBtn
+            // 
+            this.AddBookBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AddBookBtn.Location = new System.Drawing.Point(153, 221);
+            this.AddBookBtn.Name = "AddBookBtn";
+            this.AddBookBtn.Size = new System.Drawing.Size(258, 25);
+            this.AddBookBtn.TabIndex = 4;
+            this.AddBookBtn.Text = "Add new book";
+            this.AddBookBtn.UseVisualStyleBackColor = true;
             // 
             // ViewBooksBtn
             // 
@@ -103,16 +113,6 @@ namespace LibraryApp
             this.SignOutBtn.TabIndex = 3;
             this.SignOutBtn.Text = "Sign Out";
             this.SignOutBtn.UseVisualStyleBackColor = true;
-            // 
-            // AddBookBtn
-            // 
-            this.AddBookBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AddBookBtn.Location = new System.Drawing.Point(153, 221);
-            this.AddBookBtn.Name = "AddBookBtn";
-            this.AddBookBtn.Size = new System.Drawing.Size(258, 25);
-            this.AddBookBtn.TabIndex = 4;
-            this.AddBookBtn.Text = "Add new book";
-            this.AddBookBtn.UseVisualStyleBackColor = true;
             // 
             // LibrarianMenu
             // 

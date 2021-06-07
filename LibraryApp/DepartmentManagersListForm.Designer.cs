@@ -2,7 +2,7 @@
 
 namespace LibraryApp
 {
-    partial class UsersListForm
+    partial class DepartmentManagersListForm
     {
         /// <summary>
         /// Required designer variable.
@@ -44,8 +44,8 @@ namespace LibraryApp
             // 
             this.tableLayoutPanel1.ColumnCount = 4;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.BackBtn, 4, 0);
@@ -57,14 +57,14 @@ namespace LibraryApp
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(564, 40);
-            this.tableLayoutPanel1.TabIndex = 2;
+            this.tableLayoutPanel1.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Location = new System.Drawing.Point(59, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(388, 40);
+            this.label3.Size = new System.Drawing.Size(332, 40);
             this.label3.TabIndex = 4;
             this.label3.Text = "Name";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -82,11 +82,11 @@ namespace LibraryApp
             // label2
             // 
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Location = new System.Drawing.Point(453, 0);
+            this.label2.Location = new System.Drawing.Point(397, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 40);
+            this.label2.Size = new System.Drawing.Size(106, 40);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Access Level";
+            this.label2.Text = "Department Id";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
@@ -105,19 +105,19 @@ namespace LibraryApp
             this.TablePanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TablePanel.Location = new System.Drawing.Point(0, 40);
             this.TablePanel.Name = "TablePanel";
-            this.TablePanel.Size = new System.Drawing.Size(564, 410);
-            this.TablePanel.TabIndex = 3;
+            this.TablePanel.Size = new System.Drawing.Size(564, 401);
+            this.TablePanel.TabIndex = 4;
             // 
-            // UsersListForm
+            // DepartmentManagersListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(564, 450);
+            this.ClientSize = new System.Drawing.Size(564, 441);
             this.Controls.Add(this.TablePanel);
             this.Controls.Add(this.tableLayoutPanel1);
             this.MinimumSize = new System.Drawing.Size(580, 480);
-            this.Name = "UsersListForm";
-            this.Text = "UsersListForm";
+            this.Name = "DepartmentManagersListForm";
+            this.Text = "DepartmentManagersListForm";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
         }

@@ -23,7 +23,7 @@ namespace LibraryApp
             LoginReaderBtn.Click += (sender, args) => { FormsManager.ChangeForm(new ReaderMenu(new ReaderUser(0,""))); };
             LoginLibrarianBtn.Click += (sender, args) => { FormsManager.ChangeForm(new LibrarianMenu(new Librarian("", 0))); };
             LoginDepartmentHeadBtn.Click += (sender, args) => { FormsManager.ChangeForm(new DepartmentHeadMenu()); };
-            LoginHeadManagerBtn.Click += (sender, args) => { FormsManager.ChangeForm(new HeadManagerMenu()); };
+            LoginHeadManagerBtn.Click += (sender, args) => { FormsManager.ChangeForm(new HeadManagerMenu(new HeadManager())); };
 
         }
 
@@ -35,6 +35,12 @@ namespace LibraryApp
         public void ChangeForms(object sender, EventArgs e)
         {
             FormsManager.ChangeForm(new UserLoginForm());
+        }
+
+        protected override void OnFormClosed(FormClosedEventArgs e)
+        {
+            base.OnFormClosed(e);
+            Application.Exit();
         }
     }
 }

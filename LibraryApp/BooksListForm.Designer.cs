@@ -101,6 +101,7 @@ namespace LibraryApp
             // 
             // TablePanel
             // 
+            this.TablePanel.AutoScroll = true;
             this.TablePanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TablePanel.Location = new System.Drawing.Point(0, 40);
             this.TablePanel.Name = "TablePanel";
