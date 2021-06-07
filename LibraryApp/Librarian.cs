@@ -34,7 +34,7 @@ namespace LibraryApp
 
         public List<ReaderUser> GetUsersList()
         {
-            return null;
+            return UsersList.Instance.GetUsersList;
         }
 
         public void ReturnBook(Book book)

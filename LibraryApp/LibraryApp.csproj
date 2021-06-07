@@ -139,6 +139,18 @@
         </Compile>
         <Compile Include="UsersList.cs" />
         <Compile Include="ReaderUser.cs" />
+        <Compile Include="UsersListForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="UsersListForm.Designer.cs">
+          <DependentUpon>UsersListForm.cs</DependentUpon>
+        </Compile>
+        <Compile Include="UsersListRow.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="UsersListRow.Designer.cs">
+          <DependentUpon>UsersListRow.cs</DependentUpon>
+        </Compile>
         <EmbeddedResource Include="AddBookDialog.resx">
           <DependentUpon>AddBookDialog.cs</DependentUpon>
         </EmbeddedResource>
@@ -186,6 +198,12 @@
         </EmbeddedResource>
         <EmbeddedResource Include="UserLoginForm.resx">
           <DependentUpon>UserLoginForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="UsersListForm.resx">
+          <DependentUpon>UsersListForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="UsersListRow.resx">
+          <DependentUpon>UsersListRow.cs</DependentUpon>
         </EmbeddedResource>
         <None Include="Properties\Settings.settings">
             <Generator>SettingsSingleFileGenerator</Generator>

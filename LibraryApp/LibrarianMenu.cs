@@ -17,7 +17,7 @@ namespace LibraryApp
             };
             ViewUsersBtn.Click += (sender, args) =>
             {
-                throw new NotImplementedException();
+                FormsManager.ChangeForm(new UsersListForm(librarian.GetUsersList()));
             };
             AddUserBtn.Click += (sender, args) =>
             {
