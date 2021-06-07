@@ -57,6 +57,11 @@ namespace LibraryApp
             BooksList.Instance.AddBook(book);
         }
 
+        public void AddUserToList(ReaderUser user)
+        {
+            UsersList.Instance.AddUser(user);
+        }
+
         public void WriteOffBook(Book book)
         {
             BooksList.Instance.RemoveBook(book);

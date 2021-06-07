@@ -46,6 +46,18 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="AddBookDialog.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="AddBookDialog.Designer.cs">
+          <DependentUpon>AddBookDialog.cs</DependentUpon>
+        </Compile>
+        <Compile Include="AddUserDialog.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="AddUserDialog.Designer.cs">
+          <DependentUpon>AddUserDialog.cs</DependentUpon>
+        </Compile>
         <Compile Include="Book.cs" />
         <Compile Include="BookFilter.cs" />
         <Compile Include="BooksList.cs" />
@@ -127,6 +139,12 @@
         </Compile>
         <Compile Include="UsersList.cs" />
         <Compile Include="ReaderUser.cs" />
+        <EmbeddedResource Include="AddBookDialog.resx">
+          <DependentUpon>AddBookDialog.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="AddUserDialog.resx">
+          <DependentUpon>AddUserDialog.cs</DependentUpon>
+        </EmbeddedResource>
         <EmbeddedResource Include="BooksListForm.resx">
           <DependentUpon>BooksListForm.cs</DependentUpon>
         </EmbeddedResource>

@@ -21,7 +21,15 @@ namespace LibraryApp
             };
             AddUserBtn.Click += (sender, args) =>
             {
-                throw new NotImplementedException();
+                var dialog = new AddUserDialog();
+                if (dialog.ShowDialog() == DialogResult.OK)
+                    librarian.AddUserToList(dialog.GetUser());  
+            };
+            AddBookBtn.Click += (sender, args) =>
+            { 
+                var dialog = new AddBookDialog();
+                if (dialog.ShowDialog() == DialogResult.OK)
+                    librarian.AddBookToList(dialog.GetBook());  
             };
             SignOutBtn.Click += (sender, args) =>
             {

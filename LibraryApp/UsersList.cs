@@ -30,7 +30,7 @@ namespace LibraryApp
 
         public void AddUser(ReaderUser user)
         {
-            usersList.Add(user);
+            usersList.Add(new ReaderUser(user, usersList.Count));
         }
 
         public void ChangeUserAccess(int id, int newAccesssLevel)
