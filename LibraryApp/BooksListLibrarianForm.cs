@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace LibraryApp
@@ -6,25 +7,39 @@ namespace LibraryApp
     public partial class BooksListLibrarianForm : Form
     {
         private List<BooksListLibrarianRow> childForms;
-        public BooksListLibrarianForm(List<Book> books)
+        private List<Book> booksUnfiltered;
+        private Librarian librarian;
+        private Panel mainPanel;
+        
+        public BooksListLibrarianForm(List<Book> books, Librarian librarian)
         {
             InitializeComponent();
-            foreach (var book in books)
+            
+            booksUnfiltered = books;
+            this.librarian = librarian;
+            BackBtn.Click += (sender, args) => { FormsManager.GoBack(); };
+            FilterBtn.Click += (sender, args) => { throw new NotImplementedException(); }; 
+
+            foreach (var book in booksUnfiltered)
             {
                 var newRow = new BooksListLibrarianRow(book, this);
                 childForms.Add(newRow);
-                
-                Control mainPanel = null;
-                foreach (Control control in Controls)
+                foreach (Control control in newRow.Controls)
                 {
-                    if (control.Name.Equals("TablePanel"))
-                    {
-                        mainPanel = control;
-                        break;
-                    }
+                    mainPanel.Controls.Add(control);    
                 }
-                if (mainPanel == null) return;
-                
+            }
+        }
+        
+        private void FilterBooks(BookFilter filter)
+        {
+            mainPanel.Controls.Clear();
+            CloseChildForms();
+            
+            foreach (var book in filter.FilterList(booksUnfiltered))
+            {
+                var newRow = new BooksListLibrarianRow(book, this);
+                childForms.Add(newRow);
                 foreach (Control control in newRow.Controls)
                 {
                     mainPanel.Controls.Add(control);    
@@ -35,10 +50,16 @@ namespace LibraryApp
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             base.OnFormClosing(e);
+            CloseChildForms();
+        }
+        
+        private void CloseChildForms()
+        {
             foreach (var form in childForms)
             {
                 form.Close();
             }
+            childForms.Clear();
         }
     }
 }

@@ -33,8 +33,8 @@ namespace LibraryApp
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.FilterBtn = new System.Windows.Forms.Button();
+            this.BackBtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.TablePanel = new System.Windows.Forms.Panel();
@@ -50,8 +50,8 @@ namespace LibraryApp
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button2, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button1, 4, 0);
+            this.tableLayoutPanel1.Controls.Add(this.FilterBtn, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.BackBtn, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -72,25 +72,25 @@ namespace LibraryApp
             this.label3.Text = "Author";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button2
+            // FilterBtn
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.Location = new System.Drawing.Point(397, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(78, 34);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Filter";
-            this.button2.UseVisualStyleBackColor = true;
+            this.FilterBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FilterBtn.Location = new System.Drawing.Point(397, 3);
+            this.FilterBtn.Name = "FilterBtn";
+            this.FilterBtn.Size = new System.Drawing.Size(78, 34);
+            this.FilterBtn.TabIndex = 5;
+            this.FilterBtn.Text = "Filter";
+            this.FilterBtn.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // BackBtn
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Location = new System.Drawing.Point(481, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(80, 34);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Back\r\n";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BackBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BackBtn.Location = new System.Drawing.Point(481, 3);
+            this.BackBtn.Name = "BackBtn";
+            this.BackBtn.Size = new System.Drawing.Size(80, 34);
+            this.BackBtn.TabIndex = 4;
+            this.BackBtn.Text = "Back\r\n";
+            this.BackBtn.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -135,8 +135,8 @@ namespace LibraryApp
             this.ResumeLayout(false);
         }
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button BackBtn;
+        private System.Windows.Forms.Button FilterBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

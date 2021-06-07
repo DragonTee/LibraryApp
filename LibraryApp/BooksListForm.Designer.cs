@@ -32,9 +32,9 @@ namespace LibraryApp
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.BackBtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.FilterBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.TablePanel = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1.SuspendLayout();
@@ -47,9 +47,9 @@ namespace LibraryApp
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.Controls.Add(this.button2, 4, 0);
+            this.tableLayoutPanel1.Controls.Add(this.BackBtn, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button1, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.FilterBtn, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -59,15 +59,15 @@ namespace LibraryApp
             this.tableLayoutPanel1.Size = new System.Drawing.Size(564, 40);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // button2
+            // BackBtn
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.Location = new System.Drawing.Point(509, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(52, 34);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Back\r\n";
-            this.button2.UseVisualStyleBackColor = true;
+            this.BackBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BackBtn.Location = new System.Drawing.Point(509, 3);
+            this.BackBtn.Name = "BackBtn";
+            this.BackBtn.Size = new System.Drawing.Size(52, 34);
+            this.BackBtn.TabIndex = 3;
+            this.BackBtn.Text = "Back\r\n";
+            this.BackBtn.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -79,15 +79,15 @@ namespace LibraryApp
             this.label2.Text = "Author";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button1
+            // FilterBtn
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Location = new System.Drawing.Point(453, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(50, 34);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Filter";
-            this.button1.UseVisualStyleBackColor = true;
+            this.FilterBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FilterBtn.Location = new System.Drawing.Point(453, 3);
+            this.FilterBtn.Name = "FilterBtn";
+            this.FilterBtn.Size = new System.Drawing.Size(50, 34);
+            this.FilterBtn.TabIndex = 0;
+            this.FilterBtn.Text = "Filter";
+            this.FilterBtn.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -123,8 +123,8 @@ namespace LibraryApp
             this.ResumeLayout(false);
         }
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button BackBtn;
+        private System.Windows.Forms.Button FilterBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;

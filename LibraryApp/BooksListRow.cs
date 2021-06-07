@@ -7,18 +7,9 @@ namespace LibraryApp
         public BooksListRow(Book book)
         {
             InitializeComponent();
-            foreach (Control control in Controls)
-            {
-                switch (control.Name)
-                {
-                    case "BookName":
-                        control.Text = book.Name;
-                        break;
-                    case "BookAuthor":
-                        control.Text = book.Author;
-                        break;
-                }
-            }
+            
+            BookName.Text = book.Name;
+            BookAuthor.Text = book.Author;
         }
     }
 }

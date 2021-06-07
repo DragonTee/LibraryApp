@@ -10,38 +10,21 @@ namespace LibraryApp
         {
             InitializeComponent();
             parentForm = parent;
-            foreach (Control control in Controls)
+
+            BookName.Text = book.Name;
+            BookAuthor.Text = book.Author;
+            BookTaken.Text = book.Taken ? book.TakenBy.ToString() : "-";
+            WriteOffBtn.Click += (sender, args) =>
             {
-                switch (control.Name)
-                {
-                    case "BookName":
-                        control.Text = book.Name;
-                        break;
-                    case "BookAuthor":
-                        control.Text = book.Author;
-                        break;
-                    case "BookTaken":
-                        control.Text = book.Taken ? book.TakenBy.ToString() : "-";
-                        break;
-                    case "WriteOffBtn":
-                        control.Click += (sender, args) =>
-                        {
-                            BooksList.Instance.RemoveBook(book);
-                            throw new NotImplementedException();
-                        };
-                        break;
-                    case "OrderBtn":
-                        control.Click += (sender, args) => { BooksList.Instance.SetAsTaken(book, 0);
-                            throw new NotImplementedException();
-                        };
-                        break;
-                    case "ReturnBtn":
-                        control.Click += (sender, args) => { BooksList.Instance.ReturnBook(book);
-                            throw new NotImplementedException();
-                        };
-                        break;
-                }
-            }
+                BooksList.Instance.RemoveBook(book);
+                throw new NotImplementedException();
+            };
+            OrderBtn.Click += (sender, args) => { BooksList.Instance.SetAsTaken(book, 0);
+                throw new NotImplementedException();
+            };
+            ReturnBtn.Click += (sender, args) => { BooksList.Instance.ReturnBook(book);
+                throw new NotImplementedException();
+            };
         }
     }
 }

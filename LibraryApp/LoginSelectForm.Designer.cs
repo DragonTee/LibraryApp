@@ -30,10 +30,10 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.LoginReaderBtn = new System.Windows.Forms.Button();
+            this.LoginLibrarianBtn = new System.Windows.Forms.Button();
+            this.LoginDepartmentHeadBtn = new System.Windows.Forms.Button();
+            this.LoginHeadManagerBtn = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,10 +41,10 @@
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.button1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.button3, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.button4, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.LoginReaderBtn, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.LoginLibrarianBtn, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.LoginDepartmentHeadBtn, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.LoginHeadManagerBtn, 0, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -58,45 +58,45 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(564, 441);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // button1
+            // LoginReaderBtn
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Location = new System.Drawing.Point(153, 153);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(258, 29);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Login as Reader";
-            this.button1.UseVisualStyleBackColor = true;
+            this.LoginReaderBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LoginReaderBtn.Location = new System.Drawing.Point(153, 153);
+            this.LoginReaderBtn.Name = "LoginReaderBtn";
+            this.LoginReaderBtn.Size = new System.Drawing.Size(258, 29);
+            this.LoginReaderBtn.TabIndex = 0;
+            this.LoginReaderBtn.Text = "Login as Reader";
+            this.LoginReaderBtn.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // LoginLibrarianBtn
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.Location = new System.Drawing.Point(153, 188);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(258, 29);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Login as Librarian";
-            this.button2.UseVisualStyleBackColor = true;
+            this.LoginLibrarianBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LoginLibrarianBtn.Location = new System.Drawing.Point(153, 188);
+            this.LoginLibrarianBtn.Name = "LoginLibrarianBtn";
+            this.LoginLibrarianBtn.Size = new System.Drawing.Size(258, 29);
+            this.LoginLibrarianBtn.TabIndex = 1;
+            this.LoginLibrarianBtn.Text = "Login as Librarian";
+            this.LoginLibrarianBtn.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // LoginDepartmentHeadBtn
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.Location = new System.Drawing.Point(153, 223);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(258, 29);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Login as Department Head";
-            this.button3.UseVisualStyleBackColor = true;
+            this.LoginDepartmentHeadBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LoginDepartmentHeadBtn.Location = new System.Drawing.Point(153, 223);
+            this.LoginDepartmentHeadBtn.Name = "LoginDepartmentHeadBtn";
+            this.LoginDepartmentHeadBtn.Size = new System.Drawing.Size(258, 29);
+            this.LoginDepartmentHeadBtn.TabIndex = 2;
+            this.LoginDepartmentHeadBtn.Text = "Login as Department Head";
+            this.LoginDepartmentHeadBtn.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // LoginHeadManagerBtn
             // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button4.Location = new System.Drawing.Point(153, 258);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(258, 30);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Login as Head Manager";
-            this.button4.UseVisualStyleBackColor = true;
+            this.LoginHeadManagerBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LoginHeadManagerBtn.Location = new System.Drawing.Point(153, 258);
+            this.LoginHeadManagerBtn.Name = "LoginHeadManagerBtn";
+            this.LoginHeadManagerBtn.Size = new System.Drawing.Size(258, 30);
+            this.LoginHeadManagerBtn.TabIndex = 3;
+            this.LoginHeadManagerBtn.Text = "Login as Head Manager";
+            this.LoginHeadManagerBtn.UseVisualStyleBackColor = true;
             // 
             // LoginSelectForm
             // 
@@ -112,10 +112,10 @@
             this.ResumeLayout(false);
         }
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button LoginDepartmentHeadBtn;
+        private System.Windows.Forms.Button LoginHeadManagerBtn;
+        private System.Windows.Forms.Button LoginLibrarianBtn;
+        private System.Windows.Forms.Button LoginReaderBtn;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
 
         #endregion

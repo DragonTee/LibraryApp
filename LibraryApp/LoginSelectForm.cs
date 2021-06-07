@@ -14,17 +14,17 @@ namespace LibraryApp
     {
         private int currentUserType;
         
-        public LoginSelectForm()
-        {
-            InitializeComponent();
-            FormsManager.MainForm = this;
-        }
-
-        public LoginSelectForm(bool secondaryForm)
+        public LoginSelectForm(bool secondaryForm = false)
         {
             if (!secondaryForm)
                 FormsManager.MainForm = this;
             InitializeComponent();
+
+            LoginReaderBtn.Click += (sender, args) => { FormsManager.ChangeForm(new ReaderMenu()); };
+            LoginLibrarianBtn.Click += (sender, args) => { FormsManager.ChangeForm(new LibrarianMenu()); };
+            LoginDepartmentHeadBtn.Click += (sender, args) => { FormsManager.ChangeForm(new DepartmentHeadMenu()); };
+            LoginHeadManagerBtn.Click += (sender, args) => { FormsManager.ChangeForm(new HeadManagerMenu()); };
+
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
