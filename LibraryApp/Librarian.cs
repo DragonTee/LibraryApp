@@ -24,42 +24,42 @@ namespace LibraryApp
         
         public List<Book> GetBooksList()
         {
-            return null;
+            return BooksList.Instance.GetBooksList();
         }
         
         public List<Book> GetBooksListFiltered(BookFilter filter)
         {
-            return null;
+            return filter.FilterList(BooksList.Instance.GetBooksList());
         }
 
-        public List<Book> GetUsersList()
+        public List<ReaderUser> GetUsersList()
         {
             return null;
         }
 
         public void ReturnBook(Book book)
         {
-            return;
+            BooksList.Instance.ReturnBook(book);
         }
 
-        public void CreateOrder(Book book)
+        public void CreateOrder(Book book, int userId)
         {
-            return;
+            BooksList.Instance.SetAsTaken(book, userId);
         }
 
-        public void SetUserAccessLevel(int accessLevel)
+        public void SetUserAccessLevel(int userId, int accessLevel)
         {
-            return;
+            UsersList.Instance.ChangeUserAccess(userId, accessLevel);
         }
 
         public void AddBookToList(Book book)
         {
-            return;
+            BooksList.Instance.AddBook(book);
         }
 
         public void WriteOffBook(Book book)
         {
-            return;
+            BooksList.Instance.RemoveBook(book);
         }
     }
 }

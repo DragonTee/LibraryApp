@@ -14,8 +14,8 @@ namespace LibraryAppTesting
         [SetUp]
         public void SetUp()
         {
-            initialPath = DataManager.FilePath;
-            DataManager.ChangeFilePath(testPath);
+            initialPath = DataManager.UsersFilePath;
+            DataManager.ChangeUsersFilePath(testPath);
         }
         
         [Test]
@@ -73,7 +73,7 @@ namespace LibraryAppTesting
         public void TearDown()
         {
             File.Delete(testPath);
-            DataManager.ChangeFilePath(initialPath);
+            DataManager.ChangeUsersFilePath(initialPath);
         }
     }
 }

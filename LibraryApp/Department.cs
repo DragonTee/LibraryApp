@@ -5,7 +5,6 @@ namespace LibraryApp
 {
     public class Department
     {
-
         private List<Librarian> librarians;
         private int id;
 
