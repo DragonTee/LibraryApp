@@ -32,8 +32,8 @@ namespace LibraryApp
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.BookName = new System.Windows.Forms.Label();
             this.BookAuthor = new System.Windows.Forms.Label();
+            this.BookName = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,16 +53,6 @@ namespace LibraryApp
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 40);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // BookName
-            // 
-            this.BookName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BookName.Location = new System.Drawing.Point(3, 0);
-            this.BookName.Name = "BookName";
-            this.BookName.Size = new System.Drawing.Size(314, 40);
-            this.BookName.TabIndex = 0;
-            this.BookName.Text = "Book";
-            this.BookName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // BookAuthor
             // 
             this.BookAuthor.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -72,6 +62,16 @@ namespace LibraryApp
             this.BookAuthor.TabIndex = 1;
             this.BookAuthor.Text = "Author";
             this.BookAuthor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // BookName
+            // 
+            this.BookName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BookName.Location = new System.Drawing.Point(3, 0);
+            this.BookName.Name = "BookName";
+            this.BookName.Size = new System.Drawing.Size(314, 40);
+            this.BookName.TabIndex = 0;
+            this.BookName.Text = "Book";
+            this.BookName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // BooksListRow
             // 

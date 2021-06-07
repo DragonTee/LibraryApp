@@ -55,6 +55,18 @@
         <Compile Include="BooksListForm.Designer.cs">
           <DependentUpon>BooksListForm.cs</DependentUpon>
         </Compile>
+        <Compile Include="BooksListLibrarianForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="BooksListLibrarianForm.Designer.cs">
+          <DependentUpon>BooksListLibrarianForm.cs</DependentUpon>
+        </Compile>
+        <Compile Include="BooksListLibrarianRow.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="BooksListLibrarianRow.Designer.cs">
+          <DependentUpon>BooksListLibrarianRow.cs</DependentUpon>
+        </Compile>
         <Compile Include="BooksListRow.cs">
           <SubType>Form</SubType>
         </Compile>
@@ -110,6 +122,12 @@
         <Compile Include="ReaderUser.cs" />
         <EmbeddedResource Include="BooksListForm.resx">
           <DependentUpon>BooksListForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="BooksListLibrarianForm.resx">
+          <DependentUpon>BooksListLibrarianForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="BooksListLibrarianRow.resx">
+          <DependentUpon>BooksListLibrarianRow.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="BooksListRow.resx">
           <DependentUpon>BooksListRow.cs</DependentUpon>
