@@ -21,6 +21,11 @@ namespace LibraryApp
         public BooksList()
         {
             books = new List<Book>();
+            var booksData = DataManager.LoadAllBooksData();
+            foreach (var book in booksData)
+            {
+                books.Add(book);
+            }
         }
 
         public List<Book> GetBooksList() => books;
@@ -39,28 +44,34 @@ namespace LibraryApp
         public void AddBook(Book book)
         {
             books.Add(book);
+            DataManager.SaveBook(book);
         }
         
         public void RemoveBook(Book book)
         {
             books.Remove(book);
+            DataManager.DeleteBook(book);
         }
 
         public void SetAsTaken(Book book, int id)
         {
+            DataManager.DeleteBook(book);
             var index = books.FindIndex(book.Equals);
             if (books[index].Taken)
                 return;
             books[index].Taken = true;
             books[index].TakenBy = id;
+            DataManager.SaveBook(book);
         }
 
         public void ReturnBook(Book book)
         {
+            DataManager.DeleteBook(book);
             var index = books.FindIndex(book.Equals);
             if (!books[index].Taken)
                 return;
             books[index].Taken = false;
+            DataManager.SaveBook(book);
         }
     }
 }

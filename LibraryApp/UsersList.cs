@@ -26,18 +26,42 @@ namespace LibraryApp
         public UsersList()
         {
             usersList = new List<ReaderUser>();
+            var users = DataManager.LoadAllUsersData();
+            foreach (var user in users)
+            {    
+                if (user.type == DataManager.UserType.Reader)
+                    usersList.Add(new ReaderUser(new ReaderUser(user.attribute, user.name), user.id));
+            }
         }
 
         public void AddUser(ReaderUser user)
         {
             usersList.Add(user);
+            DataManager.SaveUser(new DataManager.UserData()
+            {
+                name = user.Name,
+                login = user.Name,
+                attribute = user.AccessLevel,
+                id = user.Id,
+                password = user.Name,
+                type = DataManager.UserType.Reader
+            });
         }
 
-        public void ChangeUserAccess(int id, int newAccesssLevel)
+        public void ChangeUserAccess(int id, int newAccessLevel)
         {
             foreach (var user in usersList)
             {
-                user.AccessLevel = newAccesssLevel;
+                user.AccessLevel = newAccessLevel;
+                DataManager.DeleteUser(user.Name);
+                DataManager.SaveUser(new DataManager.UserData()
+                {
+                    name = user.Name,
+                    login = user.Name,
+                    attribute = user.AccessLevel,
+                    id = user.Id,
+                    password = user.Name
+                });
             }
         }
     }
