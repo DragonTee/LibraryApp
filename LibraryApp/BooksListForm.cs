@@ -6,31 +6,29 @@ namespace LibraryApp
 {
     public partial class BooksListForm : Form
     {
-        private List<BooksListRow> childForms;
+        private List<BooksListRow> childForms = new List<BooksListRow>();
         private List<Book> booksUnfiltered;
-        private Panel mainPanel;
         public BooksListForm(List<Book> books)
         {
             InitializeComponent();
-
+            
             booksUnfiltered = books;
             BackBtn.Click += (sender, args) => { FormsManager.GoBack(); };
-            FilterBtn.Click += (sender, args) => { throw new NotImplementedException(); }; 
-
+            FilterBtn.Click += (sender, args) => { throw new NotImplementedException(); };
             foreach (var book in booksUnfiltered)
             {
                 var newRow = new BooksListRow(book);
                 childForms.Add(newRow);
                 foreach (Control control in newRow.Controls)
                 {
-                    mainPanel.Controls.Add(control);    
+                    TablePanel.Controls.Add(control);    
                 }
             }
         }
 
         private void FilterBooks(BookFilter filter)
         {
-            mainPanel.Controls.Clear();
+            TablePanel.Controls.Clear();
             CloseChildForms();
             
             foreach (var book in filter.FilterList(booksUnfiltered))
@@ -39,7 +37,7 @@ namespace LibraryApp
                 childForms.Add(newRow);
                 foreach (Control control in newRow.Controls)
                 {
-                    mainPanel.Controls.Add(control);    
+                    TablePanel.Controls.Add(control);    
                 }
             }
         }
