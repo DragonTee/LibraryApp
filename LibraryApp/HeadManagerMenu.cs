@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 
 namespace LibraryApp
 {
@@ -7,6 +8,27 @@ namespace LibraryApp
         public HeadManagerMenu()
         {
             InitializeComponent();
+            
+            ViewDepartmentsBtn.Click += (sender, args) =>
+            {
+                throw new NotImplementedException();
+            };
+            ViewHeadsBtn.Click += (sender, args) =>
+            {
+                throw new NotImplementedException();
+            };
+            AddDepartmentBtn.Click += (sender, args) =>
+            {
+                throw new NotImplementedException();
+            };
+            AddHeadBtn.Click += (sender, args) =>
+            {
+                throw new NotImplementedException();
+            };
+            SignOutBtn.Click += (sender, args) =>
+            {
+                FormsManager.GoBack();
+            };
         }
     }
 }

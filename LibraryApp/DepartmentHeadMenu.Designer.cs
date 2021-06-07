@@ -32,9 +32,9 @@ namespace LibraryApp
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.ViewLibrariansBtn = new System.Windows.Forms.Button();
+            this.AddLibrarianBtn = new System.Windows.Forms.Button();
+            this.SignOutBtn = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,9 +43,9 @@ namespace LibraryApp
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Controls.Add(this.button1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.button3, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.ViewLibrariansBtn, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.AddLibrarianBtn, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.SignOutBtn, 0, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -58,35 +58,35 @@ namespace LibraryApp
             this.tableLayoutPanel1.Size = new System.Drawing.Size(564, 441);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // button1
+            // ViewLibrariansBtn
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Location = new System.Drawing.Point(153, 153);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(258, 29);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "View all librarians";
-            this.button1.UseVisualStyleBackColor = true;
+            this.ViewLibrariansBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ViewLibrariansBtn.Location = new System.Drawing.Point(153, 153);
+            this.ViewLibrariansBtn.Name = "ViewLibrariansBtn";
+            this.ViewLibrariansBtn.Size = new System.Drawing.Size(258, 29);
+            this.ViewLibrariansBtn.TabIndex = 0;
+            this.ViewLibrariansBtn.Text = "View all librarians";
+            this.ViewLibrariansBtn.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // AddLibrarianBtn
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.Location = new System.Drawing.Point(153, 188);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(258, 29);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Add new librarian\r\n";
-            this.button2.UseVisualStyleBackColor = true;
+            this.AddLibrarianBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AddLibrarianBtn.Location = new System.Drawing.Point(153, 188);
+            this.AddLibrarianBtn.Name = "AddLibrarianBtn";
+            this.AddLibrarianBtn.Size = new System.Drawing.Size(258, 29);
+            this.AddLibrarianBtn.TabIndex = 1;
+            this.AddLibrarianBtn.Text = "Add new librarian\r\n";
+            this.AddLibrarianBtn.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // SignOutBtn
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.Location = new System.Drawing.Point(153, 258);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(258, 30);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Sign Out\r\n";
-            this.button3.UseVisualStyleBackColor = true;
+            this.SignOutBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SignOutBtn.Location = new System.Drawing.Point(153, 258);
+            this.SignOutBtn.Name = "SignOutBtn";
+            this.SignOutBtn.Size = new System.Drawing.Size(258, 30);
+            this.SignOutBtn.TabIndex = 2;
+            this.SignOutBtn.Text = "Sign Out\r\n";
+            this.SignOutBtn.UseVisualStyleBackColor = true;
             // 
             // DepartmentHeadMenu
             // 
@@ -101,10 +101,10 @@ namespace LibraryApp
             this.ResumeLayout(false);
         }
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button AddLibrarianBtn;
+        private System.Windows.Forms.Button SignOutBtn;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Button ViewLibrariansBtn;
 
         #endregion
     }

@@ -18,8 +18,14 @@ namespace LibraryApp
             booksUnfiltered = books;
             this.librarian = librarian;
             BackBtn.Click += (sender, args) => { FormsManager.GoBack(); };
-            FilterBtn.Click += (sender, args) => { throw new NotImplementedException(); }; 
-
+            FilterBtn.Click += (sender, args) =>
+            {
+                var filterDialog = new FilterDialogForm();
+                if (filterDialog.ShowDialog() == DialogResult.OK)
+                {
+                    FilterBooks(filterDialog.GetFilter());
+                }
+            };
             foreach (var book in booksUnfiltered)
             {
                 var newRow = new BooksListLibrarianRow(book, this);

@@ -32,11 +32,11 @@ namespace LibraryApp
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.ViewDepartmentsBtn = new System.Windows.Forms.Button();
+            this.ViewHeadsBtn = new System.Windows.Forms.Button();
+            this.AddDepartmentBtn = new System.Windows.Forms.Button();
+            this.AddHeadBtn = new System.Windows.Forms.Button();
+            this.SignOutBtn = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,11 +44,11 @@ namespace LibraryApp
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.button1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.button3, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.button4, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.button5, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.ViewDepartmentsBtn, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.ViewHeadsBtn, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.AddDepartmentBtn, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.AddHeadBtn, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.SignOutBtn, 0, 5);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -63,55 +63,55 @@ namespace LibraryApp
             this.tableLayoutPanel1.Size = new System.Drawing.Size(564, 441);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // button1
+            // ViewDepartmentsBtn
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Location = new System.Drawing.Point(153, 103);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(258, 34);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "View all departments";
-            this.button1.UseVisualStyleBackColor = true;
+            this.ViewDepartmentsBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ViewDepartmentsBtn.Location = new System.Drawing.Point(153, 103);
+            this.ViewDepartmentsBtn.Name = "ViewDepartmentsBtn";
+            this.ViewDepartmentsBtn.Size = new System.Drawing.Size(258, 34);
+            this.ViewDepartmentsBtn.TabIndex = 0;
+            this.ViewDepartmentsBtn.Text = "View all departments";
+            this.ViewDepartmentsBtn.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // ViewHeadsBtn
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.Location = new System.Drawing.Point(153, 143);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(258, 34);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "View all department heads";
-            this.button2.UseVisualStyleBackColor = true;
+            this.ViewHeadsBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ViewHeadsBtn.Location = new System.Drawing.Point(153, 143);
+            this.ViewHeadsBtn.Name = "ViewHeadsBtn";
+            this.ViewHeadsBtn.Size = new System.Drawing.Size(258, 34);
+            this.ViewHeadsBtn.TabIndex = 1;
+            this.ViewHeadsBtn.Text = "View all department heads";
+            this.ViewHeadsBtn.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // AddDepartmentBtn
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.Location = new System.Drawing.Point(153, 183);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(258, 34);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Add department";
-            this.button3.UseVisualStyleBackColor = true;
+            this.AddDepartmentBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AddDepartmentBtn.Location = new System.Drawing.Point(153, 183);
+            this.AddDepartmentBtn.Name = "AddDepartmentBtn";
+            this.AddDepartmentBtn.Size = new System.Drawing.Size(258, 34);
+            this.AddDepartmentBtn.TabIndex = 2;
+            this.AddDepartmentBtn.Text = "Add department";
+            this.AddDepartmentBtn.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // AddHeadBtn
             // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button4.Location = new System.Drawing.Point(153, 223);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(258, 34);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Add department head";
-            this.button4.UseVisualStyleBackColor = true;
+            this.AddHeadBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AddHeadBtn.Location = new System.Drawing.Point(153, 223);
+            this.AddHeadBtn.Name = "AddHeadBtn";
+            this.AddHeadBtn.Size = new System.Drawing.Size(258, 34);
+            this.AddHeadBtn.TabIndex = 3;
+            this.AddHeadBtn.Text = "Add department head";
+            this.AddHeadBtn.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // SignOutBtn
             // 
-            this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button5.Location = new System.Drawing.Point(153, 303);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(258, 35);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Sign Out";
-            this.button5.UseVisualStyleBackColor = true;
+            this.SignOutBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SignOutBtn.Location = new System.Drawing.Point(153, 303);
+            this.SignOutBtn.Name = "SignOutBtn";
+            this.SignOutBtn.Size = new System.Drawing.Size(258, 35);
+            this.SignOutBtn.TabIndex = 4;
+            this.SignOutBtn.Text = "Sign Out";
+            this.SignOutBtn.UseVisualStyleBackColor = true;
             // 
             // HeadManagerMenu
             // 
@@ -126,12 +126,12 @@ namespace LibraryApp
             this.ResumeLayout(false);
         }
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button AddDepartmentBtn;
+        private System.Windows.Forms.Button AddHeadBtn;
+        private System.Windows.Forms.Button SignOutBtn;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Button ViewDepartmentsBtn;
+        private System.Windows.Forms.Button ViewHeadsBtn;
 
         #endregion
     }

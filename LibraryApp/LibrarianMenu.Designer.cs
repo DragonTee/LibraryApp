@@ -32,10 +32,10 @@ namespace LibraryApp
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.ViewBooksBtn = new System.Windows.Forms.Button();
+            this.ViewUsersBtn = new System.Windows.Forms.Button();
+            this.AddUserBtn = new System.Windows.Forms.Button();
+            this.SignOutBtn = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,10 +44,10 @@ namespace LibraryApp
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Controls.Add(this.button1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.button3, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.button4, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.ViewBooksBtn, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.ViewUsersBtn, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.AddUserBtn, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.SignOutBtn, 0, 4);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -61,45 +61,45 @@ namespace LibraryApp
             this.tableLayoutPanel1.Size = new System.Drawing.Size(564, 441);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // button1
+            // ViewBooksBtn
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Location = new System.Drawing.Point(153, 128);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(258, 32);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "View all books";
-            this.button1.UseVisualStyleBackColor = true;
+            this.ViewBooksBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ViewBooksBtn.Location = new System.Drawing.Point(153, 128);
+            this.ViewBooksBtn.Name = "ViewBooksBtn";
+            this.ViewBooksBtn.Size = new System.Drawing.Size(258, 32);
+            this.ViewBooksBtn.TabIndex = 0;
+            this.ViewBooksBtn.Text = "View all books";
+            this.ViewBooksBtn.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // ViewUsersBtn
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.Location = new System.Drawing.Point(153, 166);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(258, 31);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "View all users";
-            this.button2.UseVisualStyleBackColor = true;
+            this.ViewUsersBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ViewUsersBtn.Location = new System.Drawing.Point(153, 166);
+            this.ViewUsersBtn.Name = "ViewUsersBtn";
+            this.ViewUsersBtn.Size = new System.Drawing.Size(258, 31);
+            this.ViewUsersBtn.TabIndex = 1;
+            this.ViewUsersBtn.Text = "View all users";
+            this.ViewUsersBtn.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // AddUserBtn
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.Location = new System.Drawing.Point(153, 203);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(258, 33);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Add new user";
-            this.button3.UseVisualStyleBackColor = true;
+            this.AddUserBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AddUserBtn.Location = new System.Drawing.Point(153, 203);
+            this.AddUserBtn.Name = "AddUserBtn";
+            this.AddUserBtn.Size = new System.Drawing.Size(258, 33);
+            this.AddUserBtn.TabIndex = 2;
+            this.AddUserBtn.Text = "Add new user";
+            this.AddUserBtn.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // SignOutBtn
             // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button4.Location = new System.Drawing.Point(153, 280);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(258, 33);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Sign Out";
-            this.button4.UseVisualStyleBackColor = true;
+            this.SignOutBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SignOutBtn.Location = new System.Drawing.Point(153, 280);
+            this.SignOutBtn.Name = "SignOutBtn";
+            this.SignOutBtn.Size = new System.Drawing.Size(258, 33);
+            this.SignOutBtn.TabIndex = 3;
+            this.SignOutBtn.Text = "Sign Out";
+            this.SignOutBtn.UseVisualStyleBackColor = true;
             // 
             // LibrarianMenu
             // 
@@ -114,11 +114,11 @@ namespace LibraryApp
             this.ResumeLayout(false);
         }
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button AddUserBtn;
+        private System.Windows.Forms.Button SignOutBtn;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Button ViewBooksBtn;
+        private System.Windows.Forms.Button ViewUsersBtn;
 
         #endregion
     }

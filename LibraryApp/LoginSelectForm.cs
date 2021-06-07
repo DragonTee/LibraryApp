@@ -21,7 +21,7 @@ namespace LibraryApp
             InitializeComponent();
 
             LoginReaderBtn.Click += (sender, args) => { FormsManager.ChangeForm(new ReaderMenu(new ReaderUser(0,""))); };
-            LoginLibrarianBtn.Click += (sender, args) => { FormsManager.ChangeForm(new LibrarianMenu()); };
+            LoginLibrarianBtn.Click += (sender, args) => { FormsManager.ChangeForm(new LibrarianMenu(new Librarian("", 0))); };
             LoginDepartmentHeadBtn.Click += (sender, args) => { FormsManager.ChangeForm(new DepartmentHeadMenu()); };
             LoginHeadManagerBtn.Click += (sender, args) => { FormsManager.ChangeForm(new HeadManagerMenu()); };
 

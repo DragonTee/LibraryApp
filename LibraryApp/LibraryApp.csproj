@@ -83,6 +83,12 @@
         <Compile Include="Department.cs" />
         <Compile Include="DepartmentHead.cs" />
         <Compile Include="DepartmentList.cs" />
+        <Compile Include="FilterDialogForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="FilterDialogForm.Designer.cs">
+          <DependentUpon>FilterDialogForm.cs</DependentUpon>
+        </Compile>
         <Compile Include="FormsManager.cs" />
         <Compile Include="HeadManagerMenu.cs">
           <SubType>Form</SubType>
@@ -134,6 +140,9 @@
         </EmbeddedResource>
         <EmbeddedResource Include="DepartmentHeadMenu.resx">
           <DependentUpon>DepartmentHeadMenu.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="FilterDialogForm.resx">
+          <DependentUpon>FilterDialogForm.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="HeadManagerMenu.resx">
           <DependentUpon>HeadManagerMenu.cs</DependentUpon>
