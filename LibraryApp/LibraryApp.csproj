@@ -49,6 +49,7 @@
         <Compile Include="Book.cs" />
         <Compile Include="BookFilter.cs" />
         <Compile Include="BooksList.cs" />
+        <Compile Include="DataManager.cs" />
         <Compile Include="BooksListForm.cs">
           <SubType>Form</SubType>
         </Compile>
