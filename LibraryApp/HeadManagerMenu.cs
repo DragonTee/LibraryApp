@@ -5,7 +5,7 @@ namespace LibraryApp
 {
     public partial class HeadManagerMenu : Form
     {
-        public HeadManagerMenu()
+        public HeadManagerMenu(HeadManager headManager)
         {
             InitializeComponent();
             
@@ -15,7 +15,7 @@ namespace LibraryApp
             };
             ViewHeadsBtn.Click += (sender, args) =>
             {
-                throw new NotImplementedException();
+                FormsManager.ChangeForm(new DepartmentManagersListForm(headManager.GetDepartmentHeads()));
             };
             AddDepartmentBtn.Click += (sender, args) =>
             {
@@ -23,7 +23,12 @@ namespace LibraryApp
             };
             AddHeadBtn.Click += (sender, args) =>
             {
-                throw new NotImplementedException();
+                var dialog = new AddDepartmentManagerDialog();
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    var manager = dialog.GetManager();
+                    headManager.AddDepartmentHead(manager.Name, manager.DepartmentId);
+                }
             };
             SignOutBtn.Click += (sender, args) =>
             {
