@@ -58,6 +58,12 @@
         <Compile Include="AddDepartmentManagerDialog.Designer.cs">
           <DependentUpon>AddDepartmentManagerDialog.cs</DependentUpon>
         </Compile>
+        <Compile Include="AddLibrarianDialog.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="AddLibrarianDialog.Designer.cs">
+          <DependentUpon>AddLibrarianDialog.cs</DependentUpon>
+        </Compile>
         <Compile Include="AddUserDialog.cs">
           <SubType>Form</SubType>
         </Compile>
@@ -133,6 +139,18 @@
         <Compile Include="LibrarianMenu.Designer.cs">
           <DependentUpon>LibrarianMenu.cs</DependentUpon>
         </Compile>
+        <Compile Include="LibrariansListForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="LibrariansListForm.Designer.cs">
+          <DependentUpon>LibrariansListForm.cs</DependentUpon>
+        </Compile>
+        <Compile Include="LibrariansListRow.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="LibrariansListRow.Designer.cs">
+          <DependentUpon>LibrariansListRow.cs</DependentUpon>
+        </Compile>
         <Compile Include="LoginSelectForm.cs">
             <SubType>Form</SubType>
         </Compile>
@@ -181,6 +199,9 @@
         <EmbeddedResource Include="AddDepartmentManagerDialog.resx">
           <DependentUpon>AddDepartmentManagerDialog.cs</DependentUpon>
         </EmbeddedResource>
+        <EmbeddedResource Include="AddLibrarianDialog.resx">
+          <DependentUpon>AddLibrarianDialog.cs</DependentUpon>
+        </EmbeddedResource>
         <EmbeddedResource Include="AddUserDialog.resx">
           <DependentUpon>AddUserDialog.cs</DependentUpon>
         </EmbeddedResource>
@@ -213,6 +234,12 @@
         </EmbeddedResource>
         <EmbeddedResource Include="LibrarianMenu.resx">
           <DependentUpon>LibrarianMenu.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="LibrariansListForm.resx">
+          <DependentUpon>LibrariansListForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="LibrariansListRow.resx">
+          <DependentUpon>LibrariansListRow.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="LoginSelectForm.resx">
           <DependentUpon>LoginSelectForm.cs</DependentUpon>

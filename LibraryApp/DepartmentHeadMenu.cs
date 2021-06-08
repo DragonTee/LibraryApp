@@ -5,17 +5,19 @@ namespace LibraryApp
 {
     public partial class DepartmentHeadMenu : Form
     {
-        public DepartmentHeadMenu()
+        public DepartmentHeadMenu(DepartmentHead manager)
         {
             InitializeComponent();
 
             ViewLibrariansBtn.Click += (sender, args) =>
             {
-                throw new NotImplementedException();
+                FormsManager.ChangeForm(new LibrariansListForm(manager.GetLibrariansList(), manager));
             };
             AddLibrarianBtn.Click += (sender, args) =>
             {
-                throw new NotImplementedException();
+                var dialog = new AddLibrarianDialog();
+                if (dialog.ShowDialog() == DialogResult.OK)
+                    manager.AddLibrarian(dialog.GetLibrarianName());
             };
             SignOutBtn.Click += (sender, args) =>
             {
