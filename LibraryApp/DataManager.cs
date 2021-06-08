@@ -53,7 +53,21 @@ namespace LibraryApp
                 return usersData;
             usersData = new List<UserData>();
             if (!File.Exists(UsersFilePath))
-                return usersData;
+            {
+                if (usersData.Count == 0)
+                {
+                    usersData.Add(new UserData()
+                    {
+                        login = "Owner",
+                        name = "HeadManager",
+                        attribute = 0,
+                        password = "Password",
+                        type = UserType.HeadManager,
+                        id = 1
+                    });
+                    SaveUsersData();
+                }   
+            }
             using (Stream stream = new FileStream(UsersFilePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
             {
                 using (var reader = new BinaryReader(stream, Encoding.Default))
@@ -74,23 +88,14 @@ namespace LibraryApp
                     }
                 }
             }
-            if (usersData.Count == 0)
-                usersData.Add(new UserData()
-                {
-                    login = "Owner",
-                    name = "HeadManager",
-                    attribute = 0,
-                    password = "Password",
-                    type = UserType.HeadManager,
-                    id = 1
-                });
+
             return usersData;
         }
 
         public static void SaveUser(UserData user)
         {
             if (usersData == null)
-                usersData = new List<UserData>();
+                LoadAllUsersData();
             usersData.Add(user);
             SaveUsersData();
         }
@@ -100,7 +105,10 @@ namespace LibraryApp
             foreach (var user in usersData)
             {
                 if (user.login.Equals(userLogin))
+                {
                     usersData.Remove(user);
+                    break;
+                }
             }
             SaveUsersData();
         }
@@ -158,7 +166,7 @@ namespace LibraryApp
         public static void SaveBook(Book book)
         {
             if (booksData == null)
-                booksData = new List<Book>();
+                LoadAllBooksData();
             booksData.Add(book);
             SaveBooksData();
         }
@@ -218,6 +226,44 @@ namespace LibraryApp
             return departmentsData;
         }
 
+        public static void AddLibrarianToDepartment(int departmentId, int librarianId)
+        {
+            if (departmentsData == null)
+                departmentsData = new List<DepartmentData>();
+            foreach (var data in departmentsData)
+            {
+                if (data.id == departmentId)
+                {
+                    var newData = data;
+                    newData.librariansCount += 1;
+                    newData.librariansIds.Add(librarianId);
+                    departmentsData.Remove(data);
+                    departmentsData.Add(newData);
+                    break;
+                }
+            }
+            SaveDepartmentsData();
+        }
+        
+        public static void RemoveLibrarianFromDepartment(int departmentId, int librarianId)
+        {
+            if (departmentsData == null)
+                LoadDepartmentsData();
+            foreach (var data in departmentsData)
+            {
+                if (data.id == departmentId)
+                {
+                    var newData = data;
+                    newData.librariansCount -= 1;
+                    newData.librariansIds.Remove(librarianId);
+                    departmentsData.Remove(data);
+                    departmentsData.Add(newData);
+                    break;
+                }
+            }
+            SaveDepartmentsData();
+        }
+
         public static void SaveDepartment(DepartmentData department)
         {
             if (departmentsData == null)
@@ -231,7 +277,10 @@ namespace LibraryApp
             foreach (var department in departmentsData)
             {
                 if (department.id == id)
+                {
                     departmentsData.Remove(department);
+                    break;
+                }
             }
             SaveDepartmentsData();
         }

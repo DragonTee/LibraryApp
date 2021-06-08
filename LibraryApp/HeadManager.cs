@@ -12,19 +12,19 @@ namespace LibraryApp
             set => name = value;
         }
 
-        public void CreateNewDepartment()
+        public int CreateNewDepartment()
         {
-            DepartmentList.Instance.AddDepartment();
+            return DepartmentList.Instance.AddDepartment();
         }
 
-        public void DeleteDepartment(int id)
+        public void DeleteDepartment(Department department)
         {
-            DepartmentList.Instance.DeleteDepartment(id);
+            DepartmentList.Instance.DeleteDepartment(department);
         }
 
-        public void DeleteDepartmentHead(int id)
+        public void DeleteDepartmentHead(DepartmentHead head)
         {
-            DepartmentHeadsList.Instance.DeleteDepartmentHead(id);
+            DepartmentHeadsList.Instance.DeleteDepartmentHead(head);
         }
 
         public List<DepartmentHead> GetDepartmentHeads()

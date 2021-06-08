@@ -20,21 +20,21 @@ namespace LibraryApp
                 FormsManager.MainForm = this;
             InitializeComponent();
 
-            LoginReaderBtn.Click += (sender, args) => { FormsManager.ChangeForm(new ReaderMenu(new ReaderUser(0,""))); };
+            
+            LoginReaderBtn.Click += (sender, args) => { FormsManager.ChangeForm(new UserLoginForm(DataManager.UserType.Reader)); };
+            LoginLibrarianBtn.Click += (sender, args) => { FormsManager.ChangeForm(new UserLoginForm(DataManager.UserType.Librarian)); };
+            LoginDepartmentHeadBtn.Click += (sender, args) => { FormsManager.ChangeForm(new UserLoginForm(DataManager.UserType.DepartmentHead)); };
+            LoginHeadManagerBtn.Click += (sender, args) => { FormsManager.ChangeForm(new UserLoginForm(DataManager.UserType.HeadManager)); };
+            /*LoginReaderBtn.Click += (sender, args) => { FormsManager.ChangeForm(new ReaderMenu(new ReaderUser(0,""))); };
             LoginLibrarianBtn.Click += (sender, args) => { FormsManager.ChangeForm(new LibrarianMenu(new Librarian("", 0))); };
-            LoginDepartmentHeadBtn.Click += (sender, args) => { FormsManager.ChangeForm(new DepartmentHeadMenu()); };
-            LoginHeadManagerBtn.Click += (sender, args) => { FormsManager.ChangeForm(new HeadManagerMenu(new HeadManager())); };
+            LoginDepartmentHeadBtn.Click += (sender, args) => { FormsManager.ChangeForm(new DepartmentHeadMenu(new DepartmentHead("",1,1))); };
+            LoginHeadManagerBtn.Click += (sender, args) => { FormsManager.ChangeForm(new HeadManagerMenu(new HeadManager())); };*/
 
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
             
-        }
-        
-        public void ChangeForms(object sender, EventArgs e)
-        {
-            FormsManager.ChangeForm(new UserLoginForm());
         }
 
         protected override void OnFormClosed(FormClosedEventArgs e)
