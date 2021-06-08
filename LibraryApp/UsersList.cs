@@ -36,6 +36,7 @@ namespace LibraryApp
 
         public void AddUser(ReaderUser user)
         {
+            user = new ReaderUser(user, usersList.Count);
             usersList.Add(user);
             DataManager.SaveUser(new DataManager.UserData()
             {

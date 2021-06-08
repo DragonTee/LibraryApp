@@ -165,11 +165,7 @@ namespace LibraryApp
 
         public static void DeleteBook(Book book)
         {
-            foreach (var bookOther in booksData)
-            {
-                if (book.Equals(bookOther))
-                    booksData.Remove(book);
-            }
+            booksData.Remove(book);
             SaveBooksData();
         }
         

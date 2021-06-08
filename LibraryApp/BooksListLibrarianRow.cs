@@ -16,14 +16,15 @@ namespace LibraryApp
             BookTaken.Text = book.Taken ? book.TakenBy.ToString() : "-";
             WriteOffBtn.Click += (sender, args) =>
             {
-                BooksList.Instance.RemoveBook(book);
-                throw new NotImplementedException();
+                parent.WriteOffBook(book);
             };
-            OrderBtn.Click += (sender, args) => { BooksList.Instance.SetAsTaken(book, 0);
-                throw new NotImplementedException();
+            OrderBtn.Click += (sender, args) => { 
+                var dialog = new OrderBookDialog();
+                if (dialog.ShowDialog() == DialogResult.OK)
+                    parent.MakeOrder(book, dialog.GetUserId());
             };
-            ReturnBtn.Click += (sender, args) => { BooksList.Instance.ReturnBook(book);
-                throw new NotImplementedException();
+            ReturnBtn.Click += (sender, args) => { 
+                parent.ReturnBook(book);
             };
         }
     }

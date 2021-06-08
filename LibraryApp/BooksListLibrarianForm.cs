@@ -6,15 +6,16 @@ namespace LibraryApp
 {
     public partial class BooksListLibrarianForm : Form
     {
-        private List<BooksListLibrarianRow> childForms;
-        private List<Book> booksUnfiltered;
+        private List<BooksListLibrarianRow> childForms = new List<BooksListLibrarianRow>();
+        private List<Book> booksUnfiltered = new List<Book>();
         private Librarian librarian;
         private Panel mainPanel;
         
         public BooksListLibrarianForm(List<Book> books, Librarian librarian)
         {
             InitializeComponent();
-            
+
+            mainPanel = TablePanel;
             booksUnfiltered = books;
             this.librarian = librarian;
             BackBtn.Click += (sender, args) => { FormsManager.GoBack(); };
@@ -66,6 +67,24 @@ namespace LibraryApp
                 form.Close();
             }
             childForms.Clear();
+        }
+
+        public void WriteOffBook(Book book)
+        {
+            librarian.WriteOffBook(book);
+            FilterBooks(new BookFilter("", "", -1, 100, false));
+        }
+
+        public void MakeOrder(Book book, int userId)
+        {
+            librarian.CreateOrder(book, userId);
+            FilterBooks(new BookFilter("", "", -1, 100, false));
+        }
+
+        public void ReturnBook(Book book)
+        {
+            librarian.ReturnBook(book);
+            FilterBooks(new BookFilter("", "", -1, 100, false));
         }
     }
 }

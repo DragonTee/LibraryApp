@@ -13,7 +13,7 @@ namespace LibraryApp
             this.librarian = librarian;
             ViewBooksBtn.Click += (sender, args) =>
             {
-                FormsManager.ChangeForm(new BooksListForm(librarian.GetBooksList()));
+                FormsManager.ChangeForm(new BooksListLibrarianForm(librarian.GetBooksList(), librarian));
             };
             ViewUsersBtn.Click += (sender, args) =>
             {

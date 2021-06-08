@@ -56,21 +56,20 @@ namespace LibraryApp
         public void SetAsTaken(Book book, int id)
         {
             DataManager.DeleteBook(book);
-            var index = books.FindIndex(book.Equals);
-            if (books[index].Taken)
-                return;
-            books[index].Taken = true;
-            books[index].TakenBy = id;
+            books.Remove(book);
+            book.Taken = true;
+            book.TakenBy = id;
+            books.Add(book);
             DataManager.SaveBook(book);
         }
 
         public void ReturnBook(Book book)
         {
             DataManager.DeleteBook(book);
-            var index = books.FindIndex(book.Equals);
-            if (!books[index].Taken)
-                return;
-            books[index].Taken = false;
+            books.Remove(book);
+            book.Taken = false;
+            book.TakenBy = -1;
+            books.Add(book);
             DataManager.SaveBook(book);
         }
     }
