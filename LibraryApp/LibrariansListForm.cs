@@ -45,5 +45,20 @@ namespace LibraryApp
                 }
             }
         }
+        
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+            CloseChildForms();
+        }
+
+        private void CloseChildForms()
+        {
+            foreach (var form in childForms)
+            {
+                form.Close();
+            }
+            childForms.Clear();
+        }
     }
 }

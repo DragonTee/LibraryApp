@@ -11,15 +11,16 @@ namespace LibraryApp
             
             ViewDepartmentsBtn.Click += (sender, args) =>
             {
-                throw new NotImplementedException();
+                FormsManager.ChangeForm(new DepartmentListForm(headManager.GetDepartmentsList(), headManager));
             };
             ViewHeadsBtn.Click += (sender, args) =>
             {
-                FormsManager.ChangeForm(new DepartmentManagersListForm(headManager.GetDepartmentHeads()));
+                FormsManager.ChangeForm(new DepartmentManagersListForm(headManager.GetDepartmentHeads(), headManager));
             };
             AddDepartmentBtn.Click += (sender, args) =>
             {
-                throw new NotImplementedException();
+                var dialog = new AddDepartmentDialog(headManager.CreateNewDepartment());
+                dialog.ShowDialog();
             };
             AddHeadBtn.Click += (sender, args) =>
             {

@@ -34,11 +34,11 @@ namespace LibraryApp
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Username = new System.Windows.Forms.TextBox();
+            this.Password = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.BackBtn = new System.Windows.Forms.Button();
+            this.LogInBtn = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -49,8 +49,8 @@ namespace LibraryApp
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.textBox1, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.textBox2, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.Username, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.Password, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 6);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -89,32 +89,32 @@ namespace LibraryApp
             this.label1.Text = "Username";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // Username
             // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Location = new System.Drawing.Point(123, 137);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(318, 20);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Username.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Username.Location = new System.Drawing.Point(123, 137);
+            this.Username.Name = "Username";
+            this.Username.Size = new System.Drawing.Size(318, 20);
+            this.Username.TabIndex = 2;
+            this.Username.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox2
+            // Password
             // 
-            this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox2.Location = new System.Drawing.Point(123, 238);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(318, 20);
-            this.textBox2.TabIndex = 5;
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Password.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Password.Location = new System.Drawing.Point(123, 238);
+            this.Password.Name = "Password";
+            this.Password.PasswordChar = '*';
+            this.Password.Size = new System.Drawing.Size(318, 20);
+            this.Password.TabIndex = 5;
+            this.Password.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.button1, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.button2, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.BackBtn, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.LogInBtn, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(123, 306);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -124,25 +124,25 @@ namespace LibraryApp
             this.tableLayoutPanel2.Size = new System.Drawing.Size(318, 32);
             this.tableLayoutPanel2.TabIndex = 6;
             // 
-            // button1
+            // BackBtn
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(153, 26);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Back";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BackBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BackBtn.Location = new System.Drawing.Point(3, 3);
+            this.BackBtn.Name = "BackBtn";
+            this.BackBtn.Size = new System.Drawing.Size(153, 26);
+            this.BackBtn.TabIndex = 0;
+            this.BackBtn.Text = "Back";
+            this.BackBtn.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // LogInBtn
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.Location = new System.Drawing.Point(162, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(153, 26);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Log In";
-            this.button2.UseVisualStyleBackColor = true;
+            this.LogInBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LogInBtn.Location = new System.Drawing.Point(162, 3);
+            this.LogInBtn.Name = "LogInBtn";
+            this.LogInBtn.Size = new System.Drawing.Size(153, 26);
+            this.LogInBtn.TabIndex = 1;
+            this.LogInBtn.Text = "Log In";
+            this.LogInBtn.UseVisualStyleBackColor = true;
             // 
             // UserLoginForm
             // 
@@ -159,14 +159,14 @@ namespace LibraryApp
             this.ResumeLayout(false);
         }
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button BackBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button LogInBtn;
+        private System.Windows.Forms.TextBox Password;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox Username;
 
         #endregion
     }

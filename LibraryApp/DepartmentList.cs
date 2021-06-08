@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Security.Principal;
 
 namespace LibraryApp
@@ -29,21 +30,32 @@ namespace LibraryApp
                 var newDepartment = new Department(department.id);
                 foreach (var id in department.librariansIds)
                 {
-                    newDepartment.AddLibrarian(id.ToString());
+                    newDepartment.AddLibrarian(id);
                 }
                 departments.Add(newDepartment);
             }
         }
 
-        public void DeleteDepartment(int id)
+        public void DeleteDepartment(Department department)
         {
-            departments.Remove(departments[id]);
-            DataManager.DeleteDepartment(id);
+            foreach (var librarian in department.GetLibrarians())
+            {
+                DataManager.DeleteUser(librarian.Name);
+            }
+            departments.Remove(department);
+            DataManager.DeleteDepartment(department.Id);
         }
 
         public int AddDepartment()
         {
-            var id = departments.Count;
+            int maxId = 0;
+            foreach (var department in departments)
+            {
+                maxId = Math.Max(maxId, department.Id);
+            }
+
+            maxId += 1;
+            var id = maxId;
             var newDepartment = new Department(id);
             departments.Add(newDepartment);
             DataManager.SaveDepartment(new DataManager.DepartmentData()

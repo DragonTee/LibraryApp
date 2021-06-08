@@ -64,10 +64,10 @@ namespace LibraryApp
             this.tableLayoutPanel1.SetColumnSpan(this.panel1, 2);
             this.panel1.Controls.Add(this.AddUserBtn);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 55);
+            this.panel1.Location = new System.Drawing.Point(3, 57);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(100, 0, 100, 0);
-            this.panel1.Size = new System.Drawing.Size(338, 23);
+            this.panel1.Size = new System.Drawing.Size(338, 21);
             this.panel1.TabIndex = 8;
             // 
             // AddUserBtn
@@ -75,7 +75,7 @@ namespace LibraryApp
             this.AddUserBtn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AddUserBtn.Location = new System.Drawing.Point(100, 0);
             this.AddUserBtn.Name = "AddUserBtn";
-            this.AddUserBtn.Size = new System.Drawing.Size(138, 23);
+            this.AddUserBtn.Size = new System.Drawing.Size(138, 21);
             this.AddUserBtn.TabIndex = 0;
             this.AddUserBtn.Text = "Add Librarian";
             this.AddUserBtn.UseVisualStyleBackColor = true;
@@ -85,7 +85,7 @@ namespace LibraryApp
             this.UserName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.UserName.Location = new System.Drawing.Point(71, 3);
             this.UserName.Name = "UserName";
-            this.UserName.Size = new System.Drawing.Size(270, 20);
+            this.UserName.Size = new System.Drawing.Size(270, 21);
             this.UserName.TabIndex = 3;
             this.UserName.Text = "";
             // 
@@ -94,7 +94,7 @@ namespace LibraryApp
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 26);
+            this.label1.Size = new System.Drawing.Size(62, 27);
             this.label1.TabIndex = 1;
             this.label1.Text = "User Name";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

@@ -35,6 +35,7 @@ namespace LibraryApp
             this.UserName = new System.Windows.Forms.Label();
             this.DepartmentId = new System.Windows.Forms.Label();
             this.UserId = new System.Windows.Forms.Label();
+            this.RemoveBtn = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,11 +44,12 @@ namespace LibraryApp
             this.tableLayoutPanel1.ColumnCount = 4;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel1.Controls.Add(this.UserName, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.DepartmentId, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.UserId, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.RemoveBtn, 3, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -71,7 +73,7 @@ namespace LibraryApp
             this.DepartmentId.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DepartmentId.Location = new System.Drawing.Point(563, 0);
             this.DepartmentId.Name = "DepartmentId";
-            this.DepartmentId.Size = new System.Drawing.Size(154, 40);
+            this.DepartmentId.Size = new System.Drawing.Size(114, 40);
             this.DepartmentId.TabIndex = 2;
             this.DepartmentId.Text = "DepartmentId";
             this.DepartmentId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -86,6 +88,16 @@ namespace LibraryApp
             this.UserId.Text = "ID";
             this.UserId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // RemoveBtn
+            // 
+            this.RemoveBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.RemoveBtn.Location = new System.Drawing.Point(683, 3);
+            this.RemoveBtn.Name = "RemoveBtn";
+            this.RemoveBtn.Size = new System.Drawing.Size(114, 34);
+            this.RemoveBtn.TabIndex = 5;
+            this.RemoveBtn.Text = "Remove";
+            this.RemoveBtn.UseVisualStyleBackColor = true;
+            // 
             // DepartmentManagersListRow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -99,6 +111,7 @@ namespace LibraryApp
         }
 
         private System.Windows.Forms.Label DepartmentId;
+        private System.Windows.Forms.Button RemoveBtn;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label UserId;
         private System.Windows.Forms.Label UserName;

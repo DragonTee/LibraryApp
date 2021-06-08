@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace LibraryApp
 {
@@ -32,29 +33,39 @@ namespace LibraryApp
 
         public void AddDepartmentHead(string name)
         {
-            heads.Add(new DepartmentHead(name, heads.Count, 0));
+            int maxId = 0;
+            foreach (var head in heads)
+            {
+                maxId = Math.Max(maxId, head.Id);
+            }
+            maxId += 1;
+            heads.Add(new DepartmentHead(name, maxId, 0));
         }
         
         public void AddDepartmentHead(string name, int departmentId)
         {
-            heads.Add(new DepartmentHead(name, heads.Count, departmentId));
+            int maxId = 0;
+            foreach (var head in heads)
+            {
+                maxId = Math.Max(maxId, head.Id);
+            }
+            maxId += 1;
+            heads.Add(new DepartmentHead(name, maxId, departmentId));
             DataManager.SaveUser(new DataManager.UserData()
             {
                 name = name,
                 login = name,
                 attribute = departmentId,
                 password = name,
-                id = heads.Count - 1,
+                id = maxId,
                 type = DataManager.UserType.DepartmentHead
             });
         }
 
-        public void DeleteDepartmentHead(int id)
+        public void DeleteDepartmentHead(DepartmentHead head)
         {
-            if (id >= heads.Count)
-                return;
-            DataManager.DeleteUser(heads[id].Name);
-            heads.Remove(heads[id]);            
+            DataManager.DeleteUser(head.Name);
+            heads.Remove(head);            
         }
 
         public void SetHeadDepartmentId(int headId, int departmentId)

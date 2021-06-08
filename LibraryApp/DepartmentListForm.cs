@@ -3,20 +3,20 @@ using System.Windows.Forms;
 
 namespace LibraryApp
 {
-    public partial class DepartmentManagersListForm : Form
+    public partial class DepartmentListForm : Form
     {
-        private List<DepartmentManagersListRow> childForms = new List<DepartmentManagersListRow>();
+        private List<Department> departments;
         private HeadManager headManager;
-        private List<DepartmentHead> managers;
-        public DepartmentManagersListForm(List<DepartmentHead> managers, HeadManager headManager)
-        {
+        private List<DepartmentListRow> childForms = new List<DepartmentListRow>();
+        public DepartmentListForm(List<Department> departments, HeadManager headManager)
+        {            
             InitializeComponent();
             this.headManager = headManager;
-            this.managers = managers;
+            this.departments = departments;
             BackBtn.Click += (sender, args) => { FormsManager.GoBack(); };
-            foreach (var manager in managers)
+            foreach (var department in departments)
             {
-                var newRow = new DepartmentManagersListRow(manager, this);
+                var newRow = new DepartmentListRow(department, this);
                 childForms.Add(newRow);
                 foreach (Control control in newRow.Controls)
                 {
@@ -25,13 +25,13 @@ namespace LibraryApp
             }
         }
 
-        public void RemoveDepartmentHead(DepartmentHead manager)
+        public void DeleteDepartment(Department department)
         {
-            headManager.DeleteDepartmentHead(manager);
+            headManager.DeleteDepartment(department);
             CloseChildForms();
-            foreach (var managerRow in managers)
+            foreach (var departmentRow in departments)
             {
-                var newRow = new DepartmentManagersListRow(managerRow, this);
+                var newRow = new DepartmentListRow(departmentRow, this);
                 childForms.Add(newRow);
                 foreach (Control control in newRow.Controls)
                 {
