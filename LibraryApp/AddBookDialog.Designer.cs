@@ -143,9 +143,11 @@ namespace LibraryApp
             this.AccessLevel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AccessLevel.Location = new System.Drawing.Point(95, 63);
             this.AccessLevel.Maximum = new decimal(new int[] {10, 0, 0, 0});
+            this.AccessLevel.Minimum = new decimal(new int[] {1, 0, 0, 0});
             this.AccessLevel.Name = "AccessLevel";
             this.AccessLevel.Size = new System.Drawing.Size(366, 20);
             this.AccessLevel.TabIndex = 6;
+            this.AccessLevel.Value = new decimal(new int[] {1, 0, 0, 0});
             // 
             // AddBookDialog
             // 
