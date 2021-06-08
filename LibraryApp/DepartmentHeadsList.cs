@@ -22,6 +22,12 @@ namespace LibraryApp
         public DepartmentHeadsList()
         {
             heads = new List<DepartmentHead>();
+            var users = DataManager.LoadAllUsersData();
+            foreach (var user in users)
+            {
+                if (user.type == DataManager.UserType.DepartmentHead)
+                    heads.Add(new DepartmentHead(user.name, user.id, user.attribute));
+            }
         }
 
         public void AddDepartmentHead(string name)
@@ -32,20 +38,40 @@ namespace LibraryApp
         public void AddDepartmentHead(string name, int departmentId)
         {
             heads.Add(new DepartmentHead(name, heads.Count, departmentId));
+            DataManager.SaveUser(new DataManager.UserData()
+            {
+                name = name,
+                login = name,
+                attribute = departmentId,
+                password = name,
+                id = heads.Count - 1,
+                type = DataManager.UserType.DepartmentHead
+            });
         }
 
         public void DeleteDepartmentHead(int id)
         {
             if (id >= heads.Count)
                 return;
-            heads.Remove(heads[id]);
+            DataManager.DeleteUser(heads[id].Name);
+            heads.Remove(heads[id]);            
         }
 
         public void SetHeadDepartmentId(int headId, int departmentId)
         {
             if (headId >= heads.Count)
                 return;
+            DataManager.DeleteUser(heads[headId].Name);
             heads[headId].DepartmentId = departmentId;
+            DataManager.SaveUser(new DataManager.UserData()
+            {
+                name = heads[headId].Name,
+                login = heads[headId].Name,
+                attribute = heads[headId].DepartmentId,
+                password = heads[headId].Name,
+                id = headId,
+                type = DataManager.UserType.DepartmentHead
+            });
         }
         
     }
