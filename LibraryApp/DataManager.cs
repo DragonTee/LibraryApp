@@ -54,7 +54,18 @@ namespace LibraryApp
             usersData = new List<UserData>();
             if (!File.Exists(UsersFilePath))
             {
-                return new List<UserData>();
+                return new List<UserData>()
+                {
+                    new UserData()
+                    {
+                        login = "Owner",
+                        name = "HeadManager",
+                        attribute = 0,
+                        password = "Password",
+                        type = UserType.HeadManager,
+                        id = 1
+                    }
+                };
             }
             using (Stream stream = new FileStream(UsersFilePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
             {
