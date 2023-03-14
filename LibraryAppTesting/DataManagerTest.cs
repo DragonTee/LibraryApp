@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using LibraryApp;
 using NUnit.Framework;
 
@@ -31,15 +32,7 @@ namespace LibraryAppTesting
             DataManager.SaveUser(data);
             DataManager.SaveUsersData();
             var users = DataManager.LoadAllUsersData();
-            if (users.Count == 1)
-            {
-                if (users[0].Equals(data))
-                {
-                    Assert.Pass();
-                    return;
-                }
-            }
-            Assert.Fail();
+            Assert.IsTrue(users.Where(user => user.Equals(data)).Count() == 1);
         }
         
         [Test]
@@ -58,15 +51,7 @@ namespace LibraryAppTesting
             DataManager.SaveUser(data);
             DataManager.SaveUsersData();
             var users = DataManager.LoadAllUsersData();
-            if (users.Count == 4)
-            {
-                if (users[0].Equals(data) && users[1].Equals(data) && users[2].Equals(data) && users[3].Equals(data))
-                {
-                    Assert.Pass();
-                    return;
-                }
-            }
-            Assert.Fail();
+            Assert.IsTrue(users.Where(user => user.Equals(data)).Count() == 4);
         }
 
         [TearDown]
