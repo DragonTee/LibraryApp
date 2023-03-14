@@ -54,19 +54,7 @@ namespace LibraryApp
             usersData = new List<UserData>();
             if (!File.Exists(UsersFilePath))
             {
-                if (usersData.Count == 0)
-                {
-                    usersData.Add(new UserData()
-                    {
-                        login = "Owner",
-                        name = "HeadManager",
-                        attribute = 0,
-                        password = "Password",
-                        type = UserType.HeadManager,
-                        id = 1
-                    });
-                    SaveUsersData();
-                }   
+                return new List<UserData>();
             }
             using (Stream stream = new FileStream(UsersFilePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
             {
@@ -95,7 +83,21 @@ namespace LibraryApp
         public static void SaveUser(UserData user)
         {
             if (usersData == null)
-                LoadAllUsersData();
+            {
+                usersData = LoadAllUsersData();
+            }
+            if (usersData.Count == 0)
+            {
+                usersData.Add(new UserData()
+                {
+                    login = "Owner",
+                    name = "HeadManager",
+                    attribute = 0,
+                    password = "Password",
+                    type = UserType.HeadManager,
+                    id = 1
+                });
+            }
             usersData.Add(user);
             SaveUsersData();
         }
