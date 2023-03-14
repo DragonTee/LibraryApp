@@ -13,17 +13,14 @@ namespace LibraryAppTesting
         [SetUp]
         public void SetUp()
         {
-            list = new List<Book>();
-            var book = new Book(){Name = "BookName", AccessLevel = 0, Author = "Author", ReturnDate = DateTime.Now, Taken = false, TakenBy = -1};
-            list.Add(book);
-            book = new Book(){Name = "BookName1", AccessLevel = 0, Author = "Author", ReturnDate = DateTime.Now, Taken = false, TakenBy = -1};
-            list.Add(book);
-            book = new Book(){Name = "BookName2", AccessLevel = 5, Author = "Author", ReturnDate = DateTime.Now, Taken = false, TakenBy = -1};
-            list.Add(book);
-            book = new Book(){Name = "BookName3", AccessLevel = 0, Author = "Abc", ReturnDate = DateTime.Now, Taken = false, TakenBy = -1};
-            list.Add(book);
-            book = new Book(){Name = "BookName4", AccessLevel = 0, Author = "Author", ReturnDate = DateTime.Now, Taken = false, TakenBy = 4};
-            list.Add(book);
+            list = new List<Book>()
+            {
+                new Book(){Name = "BookName",  AccessLevel = 0, Author = "Author", ReturnDate = DateTime.Now, Taken = false, TakenBy = -1},
+                new Book(){Name = "BookName1", AccessLevel = 0, Author = "Author", ReturnDate = DateTime.Now, Taken = false, TakenBy = -1},
+                new Book(){Name = "BookName2", AccessLevel = 5, Author = "Author", ReturnDate = DateTime.Now, Taken = false, TakenBy = -1},
+                new Book(){Name = "BookName3", AccessLevel = 0, Author = "Abc",    ReturnDate = DateTime.Now, Taken = false, TakenBy = -1},
+                new Book(){Name = "BookName4", AccessLevel = 0, Author = "Author", ReturnDate = DateTime.Now, Taken = false, TakenBy =  4},
+            };   
         }
         
         [Test]
