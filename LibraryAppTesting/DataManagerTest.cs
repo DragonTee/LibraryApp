@@ -30,7 +30,6 @@ namespace LibraryAppTesting
             data.attribute = 0;
             data.id = 0;
             DataManager.SaveUser(data);
-            DataManager.SaveUsersData();
             var users = DataManager.LoadAllUsersData();
             Assert.IsTrue(users.Where(user => user.Equals(data)).Count() == 1);
         }
@@ -49,7 +48,6 @@ namespace LibraryAppTesting
             DataManager.SaveUser(data);
             DataManager.SaveUser(data);
             DataManager.SaveUser(data);
-            DataManager.SaveUsersData();
             var users = DataManager.LoadAllUsersData();
             Assert.IsTrue(users.Where(user => user.Equals(data)).Count() == 4);
         }
