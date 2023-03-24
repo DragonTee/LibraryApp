@@ -3,6 +3,16 @@ using System.Linq;
 
 namespace LibraryApp
 {
+    public static class DepartmentListExtensions
+    {
+        public static List<Department> ConvertToDepartmentsLists(this List<DepartmentDataManager.DepartmentData> departmentsData) =>
+            departmentsData.Select(departmentData =>
+            {
+                var newDepartment = new Department(departmentData.id);
+                departmentData.librariansIds.ForEach(librarianId => newDepartment.AddLibrarian(librarianId));
+                return newDepartment;
+            }).ToList();
+    }
     public class DepartmentList
     {
         private static DepartmentList instance;
@@ -20,18 +30,10 @@ namespace LibraryApp
         private List<Department> departments;
         public List<Department> GetDepartmentsList => departments;
 
-        private List<Department> ConvertDepartmentsData(List<DepartmentDataManager.DepartmentData> departmentsData) =>
-            departmentsData.Select(departmentData =>
-            {
-                var newDepartment = new Department(departmentData.id);
-                departmentData.librariansIds.ForEach(librarianId => newDepartment.AddLibrarian(librarianId));
-                return newDepartment;
-            }).ToList();
-        
         public DepartmentList()
         {
             var departmentsData = DepartmentDataManager.LoadDepartmentsData();
-            departments = ConvertDepartmentsData(departmentsData);
+            departments = departmentsData.ConvertToDepartmentsLists();
         }
 
         public void DeleteDepartment(Department department)
