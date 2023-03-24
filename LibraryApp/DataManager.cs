@@ -10,7 +10,7 @@ namespace LibraryApp
         public static String UsersFilePath { get; private set; } = "UsersData.dat";
         public static String BooksFilePath { get; private set; } = "BooksData.dat";
         public static String DepartmentsFilePath { get; private set; } = "DepartmentsData.dat";
-        
+
         public enum UserType
         {
             Reader = 1,
@@ -25,7 +25,7 @@ namespace LibraryApp
             public int librariansCount;
             public List<int> librariansIds;
         }
-        
+
         public struct UserData
         {
             public string login;
@@ -46,7 +46,20 @@ namespace LibraryApp
             usersData = null;
             UsersFilePath = path;
         }
-        
+
+        private static UserData CreateDefaultOwnerUser()
+        {
+            return new UserData()
+            {
+                login = "Owner",
+                name = "HeadManager",
+                attribute = 0,
+                password = "Password",
+                type = UserType.HeadManager,
+                id = 1
+            };
+        }
+
         public static List<UserData> LoadAllUsersData()
         {
             if (usersData != null)
@@ -56,15 +69,7 @@ namespace LibraryApp
             {
                 return new List<UserData>()
                 {
-                    new UserData()
-                    {
-                        login = "Owner",
-                        name = "HeadManager",
-                        attribute = 0,
-                        password = "Password",
-                        type = UserType.HeadManager,
-                        id = 1
-                    }
+                    CreateDefaultOwnerUser(),
                 };
             }
             using (Stream stream = new FileStream(UsersFilePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
@@ -99,15 +104,7 @@ namespace LibraryApp
             }
             if (usersData.Count == 0)
             {
-                usersData.Add(new UserData()
-                {
-                    login = "Owner",
-                    name = "HeadManager",
-                    attribute = 0,
-                    password = "Password",
-                    type = UserType.HeadManager,
-                    id = 1
-                });
+                usersData.Add(CreateDefaultOwnerUser());
             }
             usersData.Add(user);
             SaveUsersData();
