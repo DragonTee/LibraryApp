@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace LibraryApp
@@ -15,34 +16,25 @@ namespace LibraryApp
             LogInBtn.Click += (sender, args) =>
             {
                 if (CheckLogin(type))
+                {
+                    var loggedReaderUser = UsersList.Instance.GetUsersList.First(user => user.Name == Username.Text);
+                    var loggedHeadUser = DepartmentHeadsList.Instance.GetDepartmentHeads.First(user => user.Name == Username.Text);
                     switch (type)
                     {
                         case UsersDataManager.UserType.Reader:
-                            foreach (var user in UsersList.Instance.GetUsersList)
-                            {
-                                if (user.Name.Equals(Username.Text))
-                                    FormsManager.ChangeForm(new ReaderMenu(user)); 
-                            }
+                            FormsManager.ChangeForm(new ReaderMenu(loggedReaderUser));
                             break;
                         case UsersDataManager.UserType.Librarian:
-                            var users = UsersDataManager.LoadAllUsersData();
-                            foreach (var user in users)
-                            {
-                                if (user.type == UsersDataManager.UserType.Librarian && Username.Text.Equals(user.name))
-                                    FormsManager.ChangeForm(new LibrarianMenu(new Librarian(user.name, user.id))); 
-                            }
+                            FormsManager.ChangeForm(new LibrarianMenu(new Librarian(loggedReaderUser.Name, loggedReaderUser.Id)));
                             break;
                         case UsersDataManager.UserType.DepartmentHead:
-                            foreach (var user in DepartmentHeadsList.Instance.GetDepartmentHeads)
-                            {
-                                if (user.Name.Equals(Username.Text))
-                                    FormsManager.ChangeForm(new DepartmentHeadMenu(user)); 
-                            }
+                            FormsManager.ChangeForm(new DepartmentHeadMenu(loggedHeadUser));
                             break;
                         case UsersDataManager.UserType.HeadManager:
                             FormsManager.ChangeForm(new HeadManagerMenu(new HeadManager()));
                             break;
                     }
+                }
             };
         }
 
