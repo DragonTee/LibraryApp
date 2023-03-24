@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Security.Principal;
 
 namespace LibraryApp
 {
@@ -52,12 +50,13 @@ namespace LibraryApp
             var id = departments.Max(department => department.Id) + 1;
             var newDepartment = new Department(id);
             departments.Add(newDepartment);
-            DataManager.SaveDepartment(new DataManager.DepartmentData()
+            var newDepartmentData = new DataManager.DepartmentData()
             {
                 id = id,
                 librariansCount = 0,
                 librariansIds = new List<int>()
-            });
+            };
+            DataManager.SaveDepartment(newDepartmentData);
             return id;
         }
     }
