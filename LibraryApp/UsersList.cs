@@ -54,7 +54,10 @@ namespace LibraryApp
         {
             foreach (var user in usersList)
             {
-                user.AccessLevel = newAccesssLevel;
+                if (user.Id == id)
+                {
+                    user.AccessLevel = newAccesssLevel;
+                }
             }
         }
     }
