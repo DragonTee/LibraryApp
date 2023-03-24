@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Security.Principal;
 
 namespace LibraryApp
@@ -48,14 +49,7 @@ namespace LibraryApp
 
         public int AddDepartment()
         {
-            int maxId = 0;
-            foreach (var department in departments)
-            {
-                maxId = Math.Max(maxId, department.Id);
-            }
-
-            maxId += 1;
-            var id = maxId;
+            var id = departments.Max(department => department.Id) + 1;
             var newDepartment = new Department(id);
             departments.Add(newDepartment);
             DataManager.SaveDepartment(new DataManager.DepartmentData()
