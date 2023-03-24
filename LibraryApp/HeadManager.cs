@@ -14,7 +14,9 @@ namespace LibraryApp
 
         public int CreateNewDepartment()
         {
-            return DepartmentList.Instance.CreateNewDepartment();
+            var newDepartmentId = DepartmentList.Instance.GenerateNewDepartmentId();
+            DepartmentList.Instance.CreateNewDepartment(newDepartmentId);
+            return newDepartmentId;
         }
 
         public void DeleteDepartment(Department department)

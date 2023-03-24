@@ -46,19 +46,19 @@ namespace LibraryApp
             DepartmentDataManager.DeleteDepartment(department.Id);
         }
 
-        public int CreateNewDepartment()
+        public int GenerateNewDepartmentId() => departments.Max(department => department.Id) + 1;
+
+        public void CreateNewDepartment(int id)
         {
-            var id = departments.Max(department => department.Id) + 1;
             var newDepartment = new Department(id);
             departments.Add(newDepartment);
             var newDepartmentData = new DepartmentDataManager.DepartmentData()
             {
-                id = id,
+                id = newDepartment.Id,
                 librariansCount = 0,
                 librariansIds = new List<int>()
             };
             DepartmentDataManager.SaveDepartment(newDepartmentData);
-            return id;
         }
     }
 }
