@@ -36,17 +36,18 @@ namespace LibraryApp
 
         public void AddUser(ReaderUser user)
         {
-            user = new ReaderUser(user, usersList.Count);
+            var newUser = new ReaderUser(user, usersList.Count);
             usersList.Add(user);
-            DataManager.SaveUser(new DataManager.UserData()
+            var newUserData = new DataManager.UserData()
             {
-                name = user.Name,
-                login = user.Name,
-                attribute = user.AccessLevel,
-                id = user.Id,
-                password = user.Name,
+                name = newUser.Name,
+                login = newUser.Name,
+                attribute = newUser.AccessLevel,
+                id = newUser.Id,
+                password = newUser.Name,
                 type = DataManager.UserType.Reader
-            });
+            };
+            DataManager.SaveUser(newUserData);
         }
 
         public void ChangeUserAccess(int id, int newAccesssLevel)
