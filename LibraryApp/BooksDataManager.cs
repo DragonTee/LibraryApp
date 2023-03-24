@@ -55,9 +55,11 @@ namespace LibraryApp
             SaveBooksDataToFile();
         }
 
-        public static void SaveBooksDataToFile()
+        public static void SaveBooksDataToFile(string filePath = null)
         {
-            using (Stream stream = new FileStream(BooksFilePath, FileMode.Create, FileAccess.Write, FileShare.ReadWrite))
+            var path = filePath ?? BooksFilePath;
+
+            using (Stream stream = new FileStream(path, FileMode.Create, FileAccess.Write, FileShare.ReadWrite))
             {
                 using (var writer = new BinaryWriter(stream, Encoding.Default))
                 {

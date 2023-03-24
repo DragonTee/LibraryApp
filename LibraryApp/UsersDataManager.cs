@@ -112,9 +112,11 @@ namespace LibraryApp
             SaveUsersDataToFile();
         }
         
-        public static void SaveUsersDataToFile()
+        public static void SaveUsersDataToFile(string filePath = null)
         {
-            using (Stream stream = new FileStream(UsersFilePath, FileMode.Create, FileAccess.Write, FileShare.ReadWrite))
+            var path = filePath ?? UsersFilePath;
+
+            using (Stream stream = new FileStream(path, FileMode.Create, FileAccess.Write, FileShare.ReadWrite))
             {
                 using (var writer = new BinaryWriter(stream, Encoding.Default))
                 {

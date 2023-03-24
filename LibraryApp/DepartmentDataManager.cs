@@ -104,9 +104,11 @@ namespace LibraryApp
             SaveDepartmentsDataToFile();
         }
 
-        public static void SaveDepartmentsDataToFile()
+        public static void SaveDepartmentsDataToFile(string filePath = null)
         {
-            using (Stream stream = new FileStream(DepartmentsFilePath, FileMode.Create, FileAccess.Write, FileShare.ReadWrite))
+            var path = filePath ?? DepartmentsFilePath;
+
+            using (Stream stream = new FileStream(path, FileMode.Create, FileAccess.Write, FileShare.ReadWrite))
             {
                 using (var writer = new BinaryWriter(stream, Encoding.Default))
                 {
