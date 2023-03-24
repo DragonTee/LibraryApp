@@ -20,7 +20,7 @@ namespace LibraryApp
             }
         }
 
-        private List<ReaderUser> usersList;
+        private readonly List<ReaderUser> usersList;
         public List<ReaderUser> GetUsersList => usersList;
         
         public UsersList()

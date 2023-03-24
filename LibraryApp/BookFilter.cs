@@ -5,15 +5,15 @@ namespace LibraryApp
 {
     public class BookFilter
     {
-        private string bookName;
-        private string authorName;
-        private int takenBy;
-        private int maxAccessLevel;
-        private bool descendingOrder;
+        private readonly string bookName;
+        private readonly string authorName;
+        private readonly int takenBy;
+        private readonly int maxAccessLevel;
+        private readonly bool descendingOrder;
 
         public class BookComparer : IComparer<Book>
         {
-            private bool ascendingOrder;
+            private readonly bool ascendingOrder;
             public BookComparer(bool ascending)
             {
                 this.ascendingOrder = ascending;

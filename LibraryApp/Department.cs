@@ -5,8 +5,8 @@ namespace LibraryApp
 {
     public class Department
     {
-        private List<Librarian> librarians;
-        private int id;
+        private readonly List<Librarian> librarians;
+        private readonly int id;
 
         public List<Librarian> GetLibrarians() => librarians;
 

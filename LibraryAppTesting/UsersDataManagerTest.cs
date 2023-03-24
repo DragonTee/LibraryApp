@@ -10,7 +10,7 @@ namespace LibraryAppTesting
     public class UsersDataManagerTest
     {
         private string initialPath;
-        private string testPath = "DataTest.test";
+        private readonly string testPath = "DataTest.test";
 
         [SetUp]
         public void SetUp()

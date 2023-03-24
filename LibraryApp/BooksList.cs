@@ -16,7 +16,7 @@ namespace LibraryApp
             }
         }
 
-        private List<Book> books;
+        private readonly List<Book> books;
 
         public BooksList()
         {

@@ -5,7 +5,7 @@ namespace LibraryApp
     public class DepartmentHead
     {
         private int departmentId;
-        private int id;
+        private readonly int id;
         private string name;
 
         public int Id => id;

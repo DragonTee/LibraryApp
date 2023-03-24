@@ -18,7 +18,7 @@ namespace LibraryApp
             }
         }
 
-        private List<DepartmentHead> heads;
+        private readonly List<DepartmentHead> heads;
         public List<DepartmentHead> GetDepartmentHeads => heads;
 
         private DepartmentHeadsList()

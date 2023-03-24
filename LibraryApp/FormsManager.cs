@@ -8,7 +8,7 @@ namespace LibraryApp
     public static class FormsManager
     {
         public static Form MainForm { get; set; }
-        private static List<Form> formsStack = new List<Form>();
+        private static readonly List<Form> formsStack = new List<Form>();
 
         public static void ChangeForm(Form newForm)
         {

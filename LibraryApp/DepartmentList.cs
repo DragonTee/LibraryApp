@@ -27,7 +27,7 @@ namespace LibraryApp
             }
         }
 
-        private List<Department> departments;
+        private readonly List<Department> departments;
         public List<Department> GetDepartmentsList => departments;
 
         public DepartmentList()
