@@ -38,18 +38,11 @@ namespace LibraryApp
             this.descendingOrder = descendingOrder;
         }
 
-        private bool CheckBook(Book book)
-        {
-            if (!book.Name.Contains(bookName))
-                return false;
-            if (!book.Author.Contains(authorName))
-                return false;
-            if (takenBy > 0 && book.TakenBy != takenBy)
-                return false;
-            if (book.AccessLevel > maxAccessLevel)
-                return false;
-            return true;
-        }
+        private bool CheckBook(Book book) =>
+            book.Name.Contains(bookName) &&
+            book.Author.Contains(authorName) &&
+            (takenBy <= 0 || book.TakenBy == takenBy) &&
+            (book.AccessLevel <= maxAccessLevel);
 
         public List<Book> FilterList(List<Book> list)
         {
