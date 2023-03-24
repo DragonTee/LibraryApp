@@ -20,7 +20,7 @@ namespace LibraryApp
         private List<Department> departments;
         public List<Department> GetDepartmentsList => departments;
 
-        private List<Department> ConvertDepartmentsData(List<DataManager.DepartmentData> departmentsData) =>
+        private List<Department> ConvertDepartmentsData(List<DepartmentDataManager.DepartmentData> departmentsData) =>
             departmentsData.Select(departmentData =>
             {
                 var newDepartment = new Department(departmentData.id);
@@ -30,7 +30,7 @@ namespace LibraryApp
         
         public DepartmentList()
         {
-            var departmentsData = DataManager.LoadDepartmentsData();
+            var departmentsData = DepartmentDataManager.LoadDepartmentsData();
             departments = ConvertDepartmentsData(departmentsData);
         }
 
@@ -38,10 +38,10 @@ namespace LibraryApp
         {
             foreach (var librarian in department.GetLibrarians())
             {
-                DataManager.DeleteUser(librarian.Name);
+                UsersDataManager.DeleteUser(librarian.Name);
             }
             departments.Remove(department);
-            DataManager.DeleteDepartment(department.Id);
+            DepartmentDataManager.DeleteDepartment(department.Id);
         }
 
         public int AddDepartment()
@@ -49,13 +49,13 @@ namespace LibraryApp
             var id = departments.Max(department => department.Id) + 1;
             var newDepartment = new Department(id);
             departments.Add(newDepartment);
-            var newDepartmentData = new DataManager.DepartmentData()
+            var newDepartmentData = new DepartmentDataManager.DepartmentData()
             {
                 id = id,
                 librariansCount = 0,
                 librariansIds = new List<int>()
             };
-            DataManager.SaveDepartment(newDepartmentData);
+            DepartmentDataManager.SaveDepartment(newDepartmentData);
             return id;
         }
     }

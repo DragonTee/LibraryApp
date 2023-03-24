@@ -5,7 +5,7 @@ namespace LibraryApp
 {
     public partial class UserLoginForm : Form
     {        
-        public UserLoginForm(DataManager.UserType type)
+        public UserLoginForm(UsersDataManager.UserType type)
         {
             InitializeComponent();
             BackBtn.Click += (sender, args) =>
@@ -17,38 +17,38 @@ namespace LibraryApp
                 if (CheckLogin(type))
                     switch (type)
                     {
-                        case DataManager.UserType.Reader:
+                        case UsersDataManager.UserType.Reader:
                             foreach (var user in UsersList.Instance.GetUsersList)
                             {
                                 if (user.Name.Equals(Username.Text))
                                     FormsManager.ChangeForm(new ReaderMenu(user)); 
                             }
                             break;
-                        case DataManager.UserType.Librarian:
-                            var users = DataManager.LoadAllUsersData();
+                        case UsersDataManager.UserType.Librarian:
+                            var users = UsersDataManager.LoadAllUsersData();
                             foreach (var user in users)
                             {
-                                if (user.type == DataManager.UserType.Librarian && Username.Text.Equals(user.name))
+                                if (user.type == UsersDataManager.UserType.Librarian && Username.Text.Equals(user.name))
                                     FormsManager.ChangeForm(new LibrarianMenu(new Librarian(user.name, user.id))); 
                             }
                             break;
-                        case DataManager.UserType.DepartmentHead:
+                        case UsersDataManager.UserType.DepartmentHead:
                             foreach (var user in DepartmentHeadsList.Instance.GetDepartmentHeads)
                             {
                                 if (user.Name.Equals(Username.Text))
                                     FormsManager.ChangeForm(new DepartmentHeadMenu(user)); 
                             }
                             break;
-                        case DataManager.UserType.HeadManager:
+                        case UsersDataManager.UserType.HeadManager:
                             FormsManager.ChangeForm(new HeadManagerMenu(new HeadManager()));
                             break;
                     }
             };
         }
 
-        private bool CheckLogin(DataManager.UserType userType)
+        private bool CheckLogin(UsersDataManager.UserType userType)
         {
-            var users = DataManager.LoadAllUsersData();
+            var users = UsersDataManager.LoadAllUsersData();
             foreach (var user in users)
             {
                 if (user.type == userType && Password.Text.Equals(user.password) && Username.Text.Equals(user.login))

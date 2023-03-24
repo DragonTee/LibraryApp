@@ -18,10 +18,10 @@ namespace LibraryApp
 
         public void AddLibrarian(int id)
         {
-            var users = DataManager.LoadAllUsersData();
+            var users = UsersDataManager.LoadAllUsersData();
             foreach (var user in users)
             {
-                if (user.type == DataManager.UserType.Librarian && user.id == id)
+                if (user.type == UsersDataManager.UserType.Librarian && user.id == id)
                 {
                     var librarian = new Librarian(user.login, id);
                     librarians.Add(librarian);
@@ -39,15 +39,15 @@ namespace LibraryApp
             }
             maxId += 1;
             librarians.Add(new Librarian(name, maxId));
-            DataManager.AddLibrarianToDepartment(id, maxId);
-            DataManager.SaveUser(new DataManager.UserData()
+            DepartmentDataManager.AddLibrarianToDepartment(id, maxId);
+            UsersDataManager.SaveUser(new UsersDataManager.UserData()
             {
                 name = name,
                 login = name,
                 attribute = 0,
                 password = name,
                 id = maxId,
-                type = DataManager.UserType.Librarian
+                type = UsersDataManager.UserType.Librarian
             });
         }
 
@@ -58,11 +58,11 @@ namespace LibraryApp
                 if (librarian.Id == id)
                 {
                     librarians.Remove(librarian);
-                    DataManager.DeleteUser(librarian.Name);
+                    UsersDataManager.DeleteUser(librarian.Name);
                     break;
                 }
             }
-            DataManager.RemoveLibrarianFromDepartment(this.id, id);
+            DepartmentDataManager.RemoveLibrarianFromDepartment(this.id, id);
         }
 
         public int Id => id;

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace LibraryApp
 {
@@ -23,10 +24,10 @@ namespace LibraryApp
         public DepartmentHeadsList()
         {
             heads = new List<DepartmentHead>();
-            var users = DataManager.LoadAllUsersData();
+            var users = UsersDataManager.LoadAllUsersData();
             foreach (var user in users)
             {
-                if (user.type == DataManager.UserType.DepartmentHead)
+                if (user.type == UsersDataManager.UserType.DepartmentHead)
                     heads.Add(new DepartmentHead(user.name, user.id, user.attribute));
             }
         }
@@ -44,27 +45,22 @@ namespace LibraryApp
         
         public void AddDepartmentHead(string name, int departmentId)
         {
-            int maxId = 0;
-            foreach (var head in heads)
-            {
-                maxId = Math.Max(maxId, head.Id);
-            }
-            maxId += 1;
-            heads.Add(new DepartmentHead(name, maxId, departmentId));
-            DataManager.SaveUser(new DataManager.UserData()
+            var newDepartmentHeadId = heads.Max(head => head.Id) + 1;
+            heads.Add(new DepartmentHead(name, newDepartmentHeadId, departmentId));
+            UsersDataManager.SaveUser(new UsersDataManager.UserData()
             {
                 name = name,
                 login = name,
                 attribute = departmentId,
                 password = name,
-                id = maxId,
-                type = DataManager.UserType.DepartmentHead
+                id = newDepartmentHeadId,
+                type = UsersDataManager.UserType.DepartmentHead
             });
         }
 
         public void DeleteDepartmentHead(DepartmentHead head)
         {
-            DataManager.DeleteUser(head.Name);
+            UsersDataManager.DeleteUser(head.Name);
             heads.Remove(head);            
         }
 
@@ -72,16 +68,16 @@ namespace LibraryApp
         {
             if (headId >= heads.Count)
                 return;
-            DataManager.DeleteUser(heads[headId].Name);
+            UsersDataManager.DeleteUser(heads[headId].Name);
             heads[headId].DepartmentId = departmentId;
-            DataManager.SaveUser(new DataManager.UserData()
+            UsersDataManager.SaveUser(new UsersDataManager.UserData()
             {
                 name = heads[headId].Name,
                 login = heads[headId].Name,
                 attribute = heads[headId].DepartmentId,
                 password = heads[headId].Name,
                 id = headId,
-                type = DataManager.UserType.DepartmentHead
+                type = UsersDataManager.UserType.DepartmentHead
             });
         }
         

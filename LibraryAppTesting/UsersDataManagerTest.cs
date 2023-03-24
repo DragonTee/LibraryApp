@@ -7,7 +7,7 @@ using NUnit.Framework;
 
 namespace LibraryAppTesting
 {
-    public class DataManagerTest
+    public class UsersDataManagerTest
     {
         private string initialPath;
         private string testPath = "DataTest.test";
@@ -15,40 +15,40 @@ namespace LibraryAppTesting
         [SetUp]
         public void SetUp()
         {
-            initialPath = DataManager.UsersFilePath;
-            DataManager.ChangeUsersFilePath(testPath);
+            initialPath = UsersDataManager.UsersFilePath;
+            UsersDataManager.ChangeUsersFilePath(testPath);
         }
         
         [Test]
         public void Test1()
         {
-            DataManager.UserData data;
+            UsersDataManager.UserData data;
             data.login = "a";
             data.name = "a";
             data.password = "a";
-            data.type = DataManager.UserType.Reader;
+            data.type = UsersDataManager.UserType.Reader;
             data.attribute = 0;
             data.id = 0;
-            DataManager.SaveUser(data);
-            var users = DataManager.LoadAllUsersData();
+            UsersDataManager.SaveUser(data);
+            var users = UsersDataManager.LoadAllUsersData();
             Assert.IsTrue(users.Where(user => user.Equals(data)).Count() == 1);
         }
         
         [Test]
         public void Test2()
         {
-            DataManager.UserData data;
+            UsersDataManager.UserData data;
             data.login = "a";
             data.name = "a";
             data.password = "a";
-            data.type = DataManager.UserType.Reader;
+            data.type = UsersDataManager.UserType.Reader;
             data.attribute = 0;
             data.id = 0;
-            DataManager.SaveUser(data);
-            DataManager.SaveUser(data);
-            DataManager.SaveUser(data);
-            DataManager.SaveUser(data);
-            var users = DataManager.LoadAllUsersData();
+            UsersDataManager.SaveUser(data);
+            UsersDataManager.SaveUser(data);
+            UsersDataManager.SaveUser(data);
+            UsersDataManager.SaveUser(data);
+            var users = UsersDataManager.LoadAllUsersData();
             Assert.IsTrue(users.Where(user => user.Equals(data)).Count() == 4);
         }
 
@@ -56,7 +56,7 @@ namespace LibraryAppTesting
         public void TearDown()
         {
             File.Delete(testPath);
-            DataManager.ChangeUsersFilePath(initialPath);
+            UsersDataManager.ChangeUsersFilePath(initialPath);
         }
     }
 }

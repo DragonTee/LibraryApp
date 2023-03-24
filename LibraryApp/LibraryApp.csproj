@@ -1,315 +1,317 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
-    <PropertyGroup>
-        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-        <ProjectGuid>{D9DFBE19-FB9E-432A-B65E-E7838797A4E0}</ProjectGuid>
-        <OutputType>WinExe</OutputType>
-        <RootNamespace>LibraryApp</RootNamespace>
-        <AssemblyName>LibraryApp</AssemblyName>
-        <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-        <FileAlignment>512</FileAlignment>
-        <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-        <Deterministic>true</Deterministic>
-    </PropertyGroup>
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-        <PlatformTarget>AnyCPU</PlatformTarget>
-        <DebugSymbols>true</DebugSymbols>
-        <DebugType>full</DebugType>
-        <Optimize>false</Optimize>
-        <OutputPath>bin\Debug\</OutputPath>
-        <DefineConstants>DEBUG;TRACE</DefineConstants>
-        <ErrorReport>prompt</ErrorReport>
-        <WarningLevel>4</WarningLevel>
-    </PropertyGroup>
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-        <PlatformTarget>AnyCPU</PlatformTarget>
-        <DebugType>pdbonly</DebugType>
-        <Optimize>true</Optimize>
-        <OutputPath>bin\Release\</OutputPath>
-        <DefineConstants>TRACE</DefineConstants>
-        <ErrorReport>prompt</ErrorReport>
-        <WarningLevel>4</WarningLevel>
-    </PropertyGroup>
-    <ItemGroup>
-        <Reference Include="System" />
-        <Reference Include="System.Core" />
-        <Reference Include="System.Xml.Linq" />
-        <Reference Include="System.Data.DataSetExtensions" />
-        <Reference Include="Microsoft.CSharp" />
-        <Reference Include="System.Data" />
-        <Reference Include="System.Deployment" />
-        <Reference Include="System.Drawing" />
-        <Reference Include="System.Net.Http" />
-        <Reference Include="System.Windows.Forms" />
-        <Reference Include="System.Xml" />
-    </ItemGroup>
-    <ItemGroup>
-        <Compile Include="AddBookDialog.cs">
-          <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="AddBookDialog.Designer.cs">
-          <DependentUpon>AddBookDialog.cs</DependentUpon>
-        </Compile>
-        <Compile Include="AddDepartmentDialog.cs">
-          <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="AddDepartmentDialog.Designer.cs">
-          <DependentUpon>AddDepartmentDialog.cs</DependentUpon>
-        </Compile>
-        <Compile Include="AddDepartmentManagerDialog.cs">
-          <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="AddDepartmentManagerDialog.Designer.cs">
-          <DependentUpon>AddDepartmentManagerDialog.cs</DependentUpon>
-        </Compile>
-        <Compile Include="AddLibrarianDialog.cs">
-          <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="AddLibrarianDialog.Designer.cs">
-          <DependentUpon>AddLibrarianDialog.cs</DependentUpon>
-        </Compile>
-        <Compile Include="AddUserDialog.cs">
-          <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="AddUserDialog.Designer.cs">
-          <DependentUpon>AddUserDialog.cs</DependentUpon>
-        </Compile>
-        <Compile Include="Book.cs" />
-        <Compile Include="BookFilter.cs" />
-        <Compile Include="BooksList.cs" />
-        <Compile Include="DataManager.cs" />
-        <Compile Include="BooksListForm.cs">
-          <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="BooksListForm.Designer.cs">
-          <DependentUpon>BooksListForm.cs</DependentUpon>
-        </Compile>
-        <Compile Include="BooksListLibrarianForm.cs">
-          <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="BooksListLibrarianForm.Designer.cs">
-          <DependentUpon>BooksListLibrarianForm.cs</DependentUpon>
-        </Compile>
-        <Compile Include="BooksListLibrarianRow.cs">
-          <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="BooksListLibrarianRow.Designer.cs">
-          <DependentUpon>BooksListLibrarianRow.cs</DependentUpon>
-        </Compile>
-        <Compile Include="BooksListRow.cs">
-          <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="BooksListRow.Designer.cs">
-          <DependentUpon>BooksListRow.cs</DependentUpon>
-        </Compile>
-        <Compile Include="DepartmentHeadMenu.cs">
-          <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="DepartmentHeadMenu.Designer.cs">
-          <DependentUpon>DepartmentHeadMenu.cs</DependentUpon>
-        </Compile>
-        <Compile Include="DepartmentHeadsList.cs" />
-        <Compile Include="Department.cs" />
-        <Compile Include="DepartmentHead.cs" />
-        <Compile Include="DepartmentList.cs" />
-        <Compile Include="DepartmentListForm.cs">
-          <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="DepartmentListForm.Designer.cs">
-          <DependentUpon>DepartmentListForm.cs</DependentUpon>
-        </Compile>
-        <Compile Include="DepartmentListRow.cs">
-          <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="DepartmentListRow.Designer.cs">
-          <DependentUpon>DepartmentListRow.cs</DependentUpon>
-        </Compile>
-        <Compile Include="DepartmentManagersListForm.cs">
-          <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="DepartmentManagersListForm.Designer.cs">
-          <DependentUpon>DepartmentManagersListForm.cs</DependentUpon>
-        </Compile>
-        <Compile Include="DepartmentManagersListRow.cs">
-          <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="DepartmentManagersListRow.Designer.cs">
-          <DependentUpon>DepartmentManagersListRow.cs</DependentUpon>
-        </Compile>
-        <Compile Include="FilterDialogForm.cs">
-          <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="FilterDialogForm.Designer.cs">
-          <DependentUpon>FilterDialogForm.cs</DependentUpon>
-        </Compile>
-        <Compile Include="FormsManager.cs" />
-        <Compile Include="HeadManagerMenu.cs">
-          <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="HeadManagerMenu.Designer.cs">
-          <DependentUpon>HeadManagerMenu.cs</DependentUpon>
-        </Compile>
-        <Compile Include="LibrarianMenu.cs">
-          <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="LibrarianMenu.Designer.cs">
-          <DependentUpon>LibrarianMenu.cs</DependentUpon>
-        </Compile>
-        <Compile Include="LibrariansListForm.cs">
-          <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="LibrariansListForm.Designer.cs">
-          <DependentUpon>LibrariansListForm.cs</DependentUpon>
-        </Compile>
-        <Compile Include="LibrariansListRow.cs">
-          <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="LibrariansListRow.Designer.cs">
-          <DependentUpon>LibrariansListRow.cs</DependentUpon>
-        </Compile>
-        <Compile Include="LoginSelectForm.cs">
-            <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="LoginSelectForm.Designer.cs">
-            <DependentUpon>LoginSelectForm.cs</DependentUpon>
-        </Compile>
-        <Compile Include="HeadManager.cs" />
-        <Compile Include="Librarian.cs" />
-        <Compile Include="OrderBookDialog.cs">
-          <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="OrderBookDialog.Designer.cs">
-          <DependentUpon>OrderBookDialog.cs</DependentUpon>
-        </Compile>
-        <Compile Include="Program.cs" />
-        <Compile Include="Properties\AssemblyInfo.cs" />
-        <Compile Include="ReaderMenu.cs">
-          <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="ReaderMenu.Designer.cs">
-          <DependentUpon>ReaderMenu.cs</DependentUpon>
-        </Compile>
-        <Compile Include="UserLoginForm.cs">
-          <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="UserLoginForm.Designer.cs">
-          <DependentUpon>UserLoginForm.cs</DependentUpon>
-        </Compile>
-        <Compile Include="UsersList.cs" />
-        <Compile Include="ReaderUser.cs" />
-        <Compile Include="UsersListForm.cs">
-          <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="UsersListForm.Designer.cs">
-          <DependentUpon>UsersListForm.cs</DependentUpon>
-        </Compile>
-        <Compile Include="UsersListRow.cs">
-          <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="UsersListRow.Designer.cs">
-          <DependentUpon>UsersListRow.cs</DependentUpon>
-        </Compile>
-        <EmbeddedResource Include="AddBookDialog.resx">
-          <DependentUpon>AddBookDialog.cs</DependentUpon>
-        </EmbeddedResource>
-        <EmbeddedResource Include="AddDepartmentDialog.resx">
-          <DependentUpon>AddDepartmentDialog.cs</DependentUpon>
-        </EmbeddedResource>
-        <EmbeddedResource Include="AddDepartmentManagerDialog.resx">
-          <DependentUpon>AddDepartmentManagerDialog.cs</DependentUpon>
-        </EmbeddedResource>
-        <EmbeddedResource Include="AddLibrarianDialog.resx">
-          <DependentUpon>AddLibrarianDialog.cs</DependentUpon>
-        </EmbeddedResource>
-        <EmbeddedResource Include="AddUserDialog.resx">
-          <DependentUpon>AddUserDialog.cs</DependentUpon>
-        </EmbeddedResource>
-        <EmbeddedResource Include="BooksListForm.resx">
-          <DependentUpon>BooksListForm.cs</DependentUpon>
-        </EmbeddedResource>
-        <EmbeddedResource Include="BooksListLibrarianForm.resx">
-          <DependentUpon>BooksListLibrarianForm.cs</DependentUpon>
-        </EmbeddedResource>
-        <EmbeddedResource Include="BooksListLibrarianRow.resx">
-          <DependentUpon>BooksListLibrarianRow.cs</DependentUpon>
-        </EmbeddedResource>
-        <EmbeddedResource Include="BooksListRow.resx">
-          <DependentUpon>BooksListRow.cs</DependentUpon>
-        </EmbeddedResource>
-        <EmbeddedResource Include="DepartmentHeadMenu.resx">
-          <DependentUpon>DepartmentHeadMenu.cs</DependentUpon>
-        </EmbeddedResource>
-        <EmbeddedResource Include="DepartmentListForm.resx">
-          <DependentUpon>DepartmentListForm.cs</DependentUpon>
-        </EmbeddedResource>
-        <EmbeddedResource Include="DepartmentListRow.resx">
-          <DependentUpon>DepartmentListRow.cs</DependentUpon>
-        </EmbeddedResource>
-        <EmbeddedResource Include="DepartmentManagersListForm.resx">
-          <DependentUpon>DepartmentManagersListForm.cs</DependentUpon>
-        </EmbeddedResource>
-        <EmbeddedResource Include="DepartmentManagersListRow.resx">
-          <DependentUpon>DepartmentManagersListRow.cs</DependentUpon>
-        </EmbeddedResource>
-        <EmbeddedResource Include="FilterDialogForm.resx">
-          <DependentUpon>FilterDialogForm.cs</DependentUpon>
-        </EmbeddedResource>
-        <EmbeddedResource Include="HeadManagerMenu.resx">
-          <DependentUpon>HeadManagerMenu.cs</DependentUpon>
-        </EmbeddedResource>
-        <EmbeddedResource Include="LibrarianMenu.resx">
-          <DependentUpon>LibrarianMenu.cs</DependentUpon>
-        </EmbeddedResource>
-        <EmbeddedResource Include="LibrariansListForm.resx">
-          <DependentUpon>LibrariansListForm.cs</DependentUpon>
-        </EmbeddedResource>
-        <EmbeddedResource Include="LibrariansListRow.resx">
-          <DependentUpon>LibrariansListRow.cs</DependentUpon>
-        </EmbeddedResource>
-        <EmbeddedResource Include="LoginSelectForm.resx">
-          <DependentUpon>LoginSelectForm.cs</DependentUpon>
-        </EmbeddedResource>
-        <EmbeddedResource Include="OrderBookDialog.resx">
-          <DependentUpon>OrderBookDialog.cs</DependentUpon>
-        </EmbeddedResource>
-        <EmbeddedResource Include="Properties\Resources.resx">
-            <Generator>ResXFileCodeGenerator</Generator>
-            <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-            <SubType>Designer</SubType>
-        </EmbeddedResource>
-        <Compile Include="Properties\Resources.Designer.cs">
-            <AutoGen>True</AutoGen>
-            <DependentUpon>Resources.resx</DependentUpon>
-        </Compile>
-        <EmbeddedResource Include="ReaderMenu.resx">
-          <DependentUpon>ReaderMenu.cs</DependentUpon>
-        </EmbeddedResource>
-        <EmbeddedResource Include="UserLoginForm.resx">
-          <DependentUpon>UserLoginForm.cs</DependentUpon>
-        </EmbeddedResource>
-        <EmbeddedResource Include="UsersListForm.resx">
-          <DependentUpon>UsersListForm.cs</DependentUpon>
-        </EmbeddedResource>
-        <EmbeddedResource Include="UsersListRow.resx">
-          <DependentUpon>UsersListRow.cs</DependentUpon>
-        </EmbeddedResource>
-        <None Include="Properties\Settings.settings">
-            <Generator>SettingsSingleFileGenerator</Generator>
-            <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-        </None>
-        <Compile Include="Properties\Settings.Designer.cs">
-            <AutoGen>True</AutoGen>
-            <DependentUpon>Settings.settings</DependentUpon>
-            <DesignTimeSharedInput>True</DesignTimeSharedInput>
-        </Compile>
-    </ItemGroup>
-    <ItemGroup>
-        <None Include="App.config" />
-    </ItemGroup>
-    <ItemGroup>
-      <Content Include="Properties\.gitignore" />
-    </ItemGroup>
-    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D9DFBE19-FB9E-432A-B65E-E7838797A4E0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LibraryApp</RootNamespace>
+    <AssemblyName>LibraryApp</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddBookDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddBookDialog.Designer.cs">
+      <DependentUpon>AddBookDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddDepartmentDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddDepartmentDialog.Designer.cs">
+      <DependentUpon>AddDepartmentDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddDepartmentManagerDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddDepartmentManagerDialog.Designer.cs">
+      <DependentUpon>AddDepartmentManagerDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddLibrarianDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddLibrarianDialog.Designer.cs">
+      <DependentUpon>AddLibrarianDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddUserDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddUserDialog.Designer.cs">
+      <DependentUpon>AddUserDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Book.cs" />
+    <Compile Include="BookFilter.cs" />
+    <Compile Include="BooksDataManager.cs" />
+    <Compile Include="BooksList.cs" />
+    <Compile Include="UsersDataManager.cs" />
+    <Compile Include="BooksListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BooksListForm.Designer.cs">
+      <DependentUpon>BooksListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BooksListLibrarianForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BooksListLibrarianForm.Designer.cs">
+      <DependentUpon>BooksListLibrarianForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BooksListLibrarianRow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BooksListLibrarianRow.Designer.cs">
+      <DependentUpon>BooksListLibrarianRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BooksListRow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BooksListRow.Designer.cs">
+      <DependentUpon>BooksListRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentDataManager.cs" />
+    <Compile Include="DepartmentHeadMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepartmentHeadMenu.Designer.cs">
+      <DependentUpon>DepartmentHeadMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentHeadsList.cs" />
+    <Compile Include="Department.cs" />
+    <Compile Include="DepartmentHead.cs" />
+    <Compile Include="DepartmentList.cs" />
+    <Compile Include="DepartmentListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepartmentListForm.Designer.cs">
+      <DependentUpon>DepartmentListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentListRow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepartmentListRow.Designer.cs">
+      <DependentUpon>DepartmentListRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentManagersListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepartmentManagersListForm.Designer.cs">
+      <DependentUpon>DepartmentManagersListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentManagersListRow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepartmentManagersListRow.Designer.cs">
+      <DependentUpon>DepartmentManagersListRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilterDialogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilterDialogForm.Designer.cs">
+      <DependentUpon>FilterDialogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManager.cs" />
+    <Compile Include="HeadManagerMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeadManagerMenu.Designer.cs">
+      <DependentUpon>HeadManagerMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LibrarianMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LibrarianMenu.Designer.cs">
+      <DependentUpon>LibrarianMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LibrariansListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LibrariansListForm.Designer.cs">
+      <DependentUpon>LibrariansListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LibrariansListRow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LibrariansListRow.Designer.cs">
+      <DependentUpon>LibrariansListRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginSelectForm.Designer.cs">
+      <DependentUpon>LoginSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeadManager.cs" />
+    <Compile Include="Librarian.cs" />
+    <Compile Include="OrderBookDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderBookDialog.Designer.cs">
+      <DependentUpon>OrderBookDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReaderMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReaderMenu.Designer.cs">
+      <DependentUpon>ReaderMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserLoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserLoginForm.Designer.cs">
+      <DependentUpon>UserLoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsersList.cs" />
+    <Compile Include="ReaderUser.cs" />
+    <Compile Include="UsersListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsersListForm.Designer.cs">
+      <DependentUpon>UsersListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsersListRow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsersListRow.Designer.cs">
+      <DependentUpon>UsersListRow.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddBookDialog.resx">
+      <DependentUpon>AddBookDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddDepartmentDialog.resx">
+      <DependentUpon>AddDepartmentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddDepartmentManagerDialog.resx">
+      <DependentUpon>AddDepartmentManagerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddLibrarianDialog.resx">
+      <DependentUpon>AddLibrarianDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddUserDialog.resx">
+      <DependentUpon>AddUserDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BooksListForm.resx">
+      <DependentUpon>BooksListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BooksListLibrarianForm.resx">
+      <DependentUpon>BooksListLibrarianForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BooksListLibrarianRow.resx">
+      <DependentUpon>BooksListLibrarianRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BooksListRow.resx">
+      <DependentUpon>BooksListRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DepartmentHeadMenu.resx">
+      <DependentUpon>DepartmentHeadMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DepartmentListForm.resx">
+      <DependentUpon>DepartmentListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DepartmentListRow.resx">
+      <DependentUpon>DepartmentListRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DepartmentManagersListForm.resx">
+      <DependentUpon>DepartmentManagersListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DepartmentManagersListRow.resx">
+      <DependentUpon>DepartmentManagersListRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilterDialogForm.resx">
+      <DependentUpon>FilterDialogForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeadManagerMenu.resx">
+      <DependentUpon>HeadManagerMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LibrarianMenu.resx">
+      <DependentUpon>LibrarianMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LibrariansListForm.resx">
+      <DependentUpon>LibrariansListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LibrariansListRow.resx">
+      <DependentUpon>LibrariansListRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginSelectForm.resx">
+      <DependentUpon>LoginSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderBookDialog.resx">
+      <DependentUpon>OrderBookDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ReaderMenu.resx">
+      <DependentUpon>ReaderMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserLoginForm.resx">
+      <DependentUpon>UserLoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsersListForm.resx">
+      <DependentUpon>UsersListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsersListRow.resx">
+      <DependentUpon>UsersListRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\.gitignore" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
