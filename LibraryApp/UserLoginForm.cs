@@ -15,12 +15,12 @@ namespace LibraryApp
             };
             LogInBtn.Click += (sender, args) =>
             {
-                if (CheckLogin(type))
+                if (!CheckLogin(type))
                 {
                     return;
                 }
-                var loggedReaderUser = UsersList.Instance.GetUsersList.First(user => user.Name == Username.Text);
-                var loggedHeadUser = DepartmentHeadsList.Instance.GetDepartmentHeads.First(user => user.Name == Username.Text);
+                var loggedReaderUser = UsersList.Instance.GetUsersList.FirstOrDefault(user => user.Name == Username.Text);
+                var loggedHeadUser = DepartmentHeadsList.Instance.GetDepartmentHeads.FirstOrDefault(user => user.Name == Username.Text);
                 switch (type)
                 {
                     case UsersDataManager.UserType.Reader:
