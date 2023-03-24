@@ -19,20 +19,19 @@ namespace LibraryApp
 
         private List<Department> departments;
         public List<Department> GetDepartmentsList => departments;
+
+        private List<Department> ConvertDepartmentsData(List<DataManager.DepartmentData> departmentsData) =>
+            departmentsData.Select(departmentData =>
+            {
+                var newDepartment = new Department(departmentData.id);
+                departmentData.librariansIds.ForEach(librarianId => newDepartment.AddLibrarian(librarianId));
+                return newDepartment;
+            }).ToList();
         
         public DepartmentList()
         {
-            departments = new List<Department>();
-            var departmentData = DataManager.LoadDepartmentsData();
-            foreach (var department in departmentData)
-            {
-                var newDepartment = new Department(department.id);
-                foreach (var id in department.librariansIds)
-                {
-                    newDepartment.AddLibrarian(id);
-                }
-                departments.Add(newDepartment);
-            }
+            var departmentsData = DataManager.LoadDepartmentsData();
+            departments = ConvertDepartmentsData(departmentsData);
         }
 
         public void DeleteDepartment(Department department)
