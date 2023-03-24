@@ -104,7 +104,7 @@ namespace LibraryApp
             SaveDepartmentsDataToFile();
         }
 
-        public static void SaveDepartmentsDataToFile(string filePath = null)
+        private static void SaveDepartmentsDataToFile(string filePath = null)
         {
             var path = filePath ?? DepartmentsFilePath;
 

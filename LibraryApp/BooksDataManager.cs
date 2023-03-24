@@ -55,7 +55,7 @@ namespace LibraryApp
             SaveBooksDataToFile();
         }
 
-        public static void SaveBooksDataToFile(string filePath = null)
+        private static void SaveBooksDataToFile(string filePath = null)
         {
             var path = filePath ?? BooksFilePath;
 

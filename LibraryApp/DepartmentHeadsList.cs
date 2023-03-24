@@ -21,7 +21,7 @@ namespace LibraryApp
         private List<DepartmentHead> heads;
         public List<DepartmentHead> GetDepartmentHeads => heads;
 
-        public DepartmentHeadsList()
+        private DepartmentHeadsList()
         {
             heads = new List<DepartmentHead>();
             var users = UsersDataManager.LoadAllUsersData();

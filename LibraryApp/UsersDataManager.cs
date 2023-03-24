@@ -127,7 +127,7 @@ namespace LibraryApp
             SaveUsersDataToFile();
         }
 
-        public static void SaveUsersDataToFile(string filePath = null)
+        private static void SaveUsersDataToFile(string filePath = null)
         {
             var path = filePath ?? UsersFilePath;
 
