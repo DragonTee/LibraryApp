@@ -38,21 +38,25 @@ namespace LibraryApp
             this.descendingOrder = descendingOrder;
         }
 
+        private bool CheckBook(Book book)
+        {
+            if (!book.Name.Contains(bookName))
+                return false;
+            if (!book.Author.Contains(authorName))
+                return false;
+            if (takenBy > 0 && book.TakenBy != takenBy)
+                return false;
+            if (book.AccessLevel > maxAccessLevel)
+                return false;
+            return true;
+        }
+
         public List<Book> FilterList(List<Book> list)
         {
             var newList = new List<Book>();
             foreach (var book in list)
             {
-                var rightBook = true;
-                if (!book.Name.Contains(bookName))
-                    rightBook = false;
-                if (!book.Author.Contains(authorName))
-                    rightBook = false;
-                if (takenBy > 0 && book.TakenBy != takenBy)
-                    rightBook = false;
-                if (book.AccessLevel > maxAccessLevel)
-                    rightBook = false;
-                if (rightBook)
+                if (CheckBook(book))
                     newList.Add(book);
             }
             newList.Sort(new BookComparer(!descendingOrder));
