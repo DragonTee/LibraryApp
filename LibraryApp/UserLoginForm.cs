@@ -17,23 +17,24 @@ namespace LibraryApp
             {
                 if (CheckLogin(type))
                 {
-                    var loggedReaderUser = UsersList.Instance.GetUsersList.First(user => user.Name == Username.Text);
-                    var loggedHeadUser = DepartmentHeadsList.Instance.GetDepartmentHeads.First(user => user.Name == Username.Text);
-                    switch (type)
-                    {
-                        case UsersDataManager.UserType.Reader:
-                            FormsManager.ChangeForm(new ReaderMenu(loggedReaderUser));
-                            break;
-                        case UsersDataManager.UserType.Librarian:
-                            FormsManager.ChangeForm(new LibrarianMenu(new Librarian(loggedReaderUser.Name, loggedReaderUser.Id)));
-                            break;
-                        case UsersDataManager.UserType.DepartmentHead:
-                            FormsManager.ChangeForm(new DepartmentHeadMenu(loggedHeadUser));
-                            break;
-                        case UsersDataManager.UserType.HeadManager:
-                            FormsManager.ChangeForm(new HeadManagerMenu(new HeadManager()));
-                            break;
-                    }
+                    return;
+                }
+                var loggedReaderUser = UsersList.Instance.GetUsersList.First(user => user.Name == Username.Text);
+                var loggedHeadUser = DepartmentHeadsList.Instance.GetDepartmentHeads.First(user => user.Name == Username.Text);
+                switch (type)
+                {
+                    case UsersDataManager.UserType.Reader:
+                        FormsManager.ChangeForm(new ReaderMenu(loggedReaderUser));
+                        break;
+                    case UsersDataManager.UserType.Librarian:
+                        FormsManager.ChangeForm(new LibrarianMenu(new Librarian(loggedReaderUser.Name, loggedReaderUser.Id)));
+                        break;
+                    case UsersDataManager.UserType.DepartmentHead:
+                        FormsManager.ChangeForm(new DepartmentHeadMenu(loggedHeadUser));
+                        break;
+                    case UsersDataManager.UserType.HeadManager:
+                        FormsManager.ChangeForm(new HeadManagerMenu(new HeadManager()));
+                        break;
                 }
             };
         }
