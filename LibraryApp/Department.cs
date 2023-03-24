@@ -58,7 +58,7 @@ namespace LibraryApp
                 if (librarian.Id == id)
                 {
                     librarians.Remove(librarian);
-                    UsersDataManager.DeleteUser(librarian.Name);
+                    UsersDataManager.DeleteLibrarian(librarian);
                     break;
                 }
             }

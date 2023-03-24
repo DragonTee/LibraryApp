@@ -40,7 +40,7 @@ namespace LibraryApp
         {
             foreach (var librarian in department.GetLibrarians())
             {
-                UsersDataManager.DeleteUser(librarian.Name);
+                UsersDataManager.DeleteLibrarian(librarian);
             }
             departments.Remove(department);
             DepartmentDataManager.DeleteDepartment(department.Id);

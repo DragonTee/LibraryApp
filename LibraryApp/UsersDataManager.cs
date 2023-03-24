@@ -99,7 +99,22 @@ namespace LibraryApp
             SaveUsersDataToFile();
         }
 
-        public static void DeleteUser(string userLogin)
+        public static void DeleteDepartmentHead(DepartmentHead departmentHead)
+        {
+            DeleteUser(departmentHead.Name);
+        }
+
+        public static void DeleteLibrarian(Librarian librarian)
+        {
+            DeleteUser(librarian.Name);
+        }
+
+        public static void DeleteReader(ReaderUser readerUser)
+        {
+            DeleteUser(readerUser.Name);
+        }
+
+        private static void DeleteUser(string userLogin)
         {
             foreach (var user in usersData)
             {
@@ -111,7 +126,7 @@ namespace LibraryApp
             }
             SaveUsersDataToFile();
         }
-        
+
         public static void SaveUsersDataToFile(string filePath = null)
         {
             var path = filePath ?? UsersFilePath;

@@ -60,7 +60,7 @@ namespace LibraryApp
 
         public void DeleteDepartmentHead(DepartmentHead head)
         {
-            UsersDataManager.DeleteUser(head.Name);
+            UsersDataManager.DeleteDepartmentHead(head);
             heads.Remove(head);            
         }
 
@@ -68,7 +68,7 @@ namespace LibraryApp
         {
             if (headId >= heads.Count)
                 return;
-            UsersDataManager.DeleteUser(heads[headId].Name);
+            UsersDataManager.DeleteDepartmentHead(heads[headId]);
             heads[headId].DepartmentId = departmentId;
             UsersDataManager.SaveUser(new UsersDataManager.UserData()
             {
