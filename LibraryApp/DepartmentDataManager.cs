@@ -61,7 +61,7 @@ namespace LibraryApp
                     break;
                 }
             }
-            SaveDepartmentsData();
+            SaveDepartmentsDataToFile();
         }
 
         public static void RemoveLibrarianFromDepartment(int departmentId, int librarianId)
@@ -80,7 +80,7 @@ namespace LibraryApp
                     break;
                 }
             }
-            SaveDepartmentsData();
+            SaveDepartmentsDataToFile();
         }
 
         public static void SaveDepartment(DepartmentData department)
@@ -88,7 +88,7 @@ namespace LibraryApp
             if (departmentsData == null)
                 departmentsData = new List<DepartmentData>();
             departmentsData.Add(department);
-            SaveDepartmentsData();
+            SaveDepartmentsDataToFile();
         }
 
         public static void DeleteDepartment(int id)
@@ -101,10 +101,10 @@ namespace LibraryApp
                     break;
                 }
             }
-            SaveDepartmentsData();
+            SaveDepartmentsDataToFile();
         }
 
-        public static void SaveDepartmentsData()
+        public static void SaveDepartmentsDataToFile()
         {
             using (Stream stream = new FileStream(DepartmentsFilePath, FileMode.Create, FileAccess.Write, FileShare.ReadWrite))
             {

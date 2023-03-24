@@ -46,16 +46,16 @@ namespace LibraryApp
             if (booksData == null)
                 LoadAllBooksData();
             booksData.Add(book);
-            SaveBooksData();
+            SaveBooksDataToFile();
         }
 
         public static void DeleteBook(Book book)
         {
             booksData.Remove(book);
-            SaveBooksData();
+            SaveBooksDataToFile();
         }
 
-        public static void SaveBooksData()
+        public static void SaveBooksDataToFile()
         {
             using (Stream stream = new FileStream(BooksFilePath, FileMode.Create, FileAccess.Write, FileShare.ReadWrite))
             {

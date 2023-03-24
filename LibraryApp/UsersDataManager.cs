@@ -96,7 +96,7 @@ namespace LibraryApp
                 usersData.Add(CreateDefaultOwnerUser());
             }
             usersData.Add(user);
-            SaveUsersData();
+            SaveUsersDataToFile();
         }
 
         public static void DeleteUser(string userLogin)
@@ -109,10 +109,10 @@ namespace LibraryApp
                     break;
                 }
             }
-            SaveUsersData();
+            SaveUsersDataToFile();
         }
         
-        public static void SaveUsersData()
+        public static void SaveUsersDataToFile()
         {
             using (Stream stream = new FileStream(UsersFilePath, FileMode.Create, FileAccess.Write, FileShare.ReadWrite))
             {

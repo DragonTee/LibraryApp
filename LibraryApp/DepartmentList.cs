@@ -46,7 +46,7 @@ namespace LibraryApp
             DepartmentDataManager.DeleteDepartment(department.Id);
         }
 
-        public int AddDepartment()
+        public int CreateNewDepartment()
         {
             var id = departments.Max(department => department.Id) + 1;
             var newDepartment = new Department(id);
